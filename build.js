@@ -82,10 +82,23 @@ function img(from, im, { eager = false, sizes = "(min-width: 900px) 50vw, 100vw"
   if (!im || !im.src) return "";
   if (!/^https?:\/\//.test(im.src) && !hasFile(im.src)) warn(`Image not found: src/${im.src}`);
   if (!im.alt && im.alt !== "") warn(`Image missing alt text: ${im.src}`);
-  const srcset = im.srcset ? ` srcset="${attr(im.srcset)}" sizes="${attr(im.sizes || sizes)}"` : "";
+  // Remote Unsplash photos: serve several widths at a sensible quality (auto=format gives WebP/AVIF),
+  // so phones download a small file instead of the full-size original.
+  let src = im.src, setStr = im.srcset;
+  if (!setStr && /^https:\/\/images\.unsplash\.com\//.test(im.src)) {
+    try {
+      const u = new URL(im.src);
+      const orig = Number(u.searchParams.get("w")) || 1600;
+      const widths = [480, 800, 1200, 1600, 2000].filter((w) => w < orig).concat(orig);
+      const variant = (w) => { const v = new URL(u); v.searchParams.set("w", w); v.searchParams.set("q", "72"); v.searchParams.set("auto", "format"); return v.toString(); };
+      setStr = widths.map((w) => `${variant(w)} ${w}w`).join(", ");
+      src = variant(Math.min(orig, 1200));
+    } catch { /* leave the URL untouched */ }
+  }
+  const srcset = setStr ? ` srcset="${attr(setStr)}" sizes="${attr(im.sizes || sizes)}"` : "";
   const dims = im.width && im.height ? ` width="${im.width}" height="${im.height}"` : "";
   const loading = eager ? ' fetchpriority="high"' : ' loading="lazy" decoding="async"';
-  return `<img${cls ? ` class="${cls}"` : ""} src="${attr(assetUrl(from, im.src))}"${srcset}${dims} alt="${attr(im.alt || "")}"${loading}>`;
+  return `<img${cls ? ` class="${cls}"` : ""} src="${attr(assetUrl(from, src))}"${srcset}${dims} alt="${attr(im.alt || "")}"${loading}>`;
 }
 
 function btn(from, cta, variant = "primary") {
@@ -596,7 +609,7 @@ function renderPage(key, extra = {}) {
     return html;
   }).join("\n");
   const fonts = C.theme.fonts.googleFontsUrl
-    ? `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="${attr(C.theme.fonts.googleFontsUrl)}">`
+    ? `<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="${attr(C.theme.fonts.googleFontsUrl)}" onload="this.onload=null;this.rel='stylesheet'"><noscript><link rel="stylesheet" href="${attr(C.theme.fonts.googleFontsUrl)}"></noscript>`
     : "";
   return `<!doctype html>
 <html lang="${attr(C.site.language)}">
@@ -627,7 +640,7 @@ ${p.seo.keywords?.length ? `<meta name="keywords" content="${attr(p.seo.keywords
 <meta name="twitter:title" content="${attr(title)}">
 <meta name="twitter:description" content="${attr(p.seo.description)}">
 <meta name="twitter:image" content="${attr(og)}">
-${fonts}
+${fonts}${JSON.stringify(C).includes("images.unsplash.com") ? '<link rel="preconnect" href="https://images.unsplash.com">' : ""}
 <link rel="stylesheet" href="${attr(prefixFor(key))}assets/css/styles.css?v=${ASSET_V}">
 <style>${themeCss()}</style>
 <script>document.documentElement.classList.add("js")</script>

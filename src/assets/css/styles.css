@@ -364,3 +364,90 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--c
   .hero__media::before { display: none; }
   .hero h1 { max-width: 13ch; font-size: clamp(2.6rem, 9vw, 4rem); }
 }
+
+
+/* ---------- Motion layer: smooth, light, and switched off for reduced-motion users ---------- */
+:root { --ease-out: cubic-bezier(.22, 1, .36, 1); }
+@keyframes fade-up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+@keyframes curtain { from { clip-path: inset(0 0 100% 0 round 4px); } to { clip-path: inset(0 0 0 0 round 4px); } }
+@keyframes slow-zoom { from { scale: 1.14; } to { scale: 1.02; } }
+@keyframes page-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes line-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes sheen { from { transform: translateX(-120%) skewX(-18deg); } to { transform: translateX(260%) skewX(-18deg); } }
+@keyframes drift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+
+main { animation: page-in .5s var(--ease-out) both; }
+
+/* header: compact, frosted and shadowed once you scroll */
+.site-header { position: sticky; top: 0; z-index: 50; transition: box-shadow .3s var(--ease-out), background-color .3s var(--ease-out); }
+.site-header .container { transition: padding .3s var(--ease-out); }
+.site-header.is-scrolled { background: rgba(255, 255, 255, .86); -webkit-backdrop-filter: saturate(160%) blur(12px); backdrop-filter: saturate(160%) blur(12px); box-shadow: 0 8px 28px -14px rgba(16, 24, 40, .28); }
+.nav a { position: relative; }
+.nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: .2rem; height: 2px; background: var(--c-primary); transform: scaleX(0); transform-origin: left; transition: transform .35s var(--ease-out); }
+@media (min-width: 900px) { .nav a:hover::after, .nav a[aria-current="page"]::after { transform: scaleX(1); } }
+
+/* hero: staggered copy, image revealed like a curtain, slow zoom + gentle parallax */
+.hero__copy > * { animation: fade-up .8s var(--ease-out) both; }
+.hero__copy > :nth-child(1) { animation-delay: .05s; }
+.hero__copy > :nth-child(2) { animation-delay: .15s; }
+.hero__copy > :nth-child(3) { animation-delay: .27s; }
+.hero__copy > :nth-child(4) { animation-delay: .38s; }
+.hero__copy > :nth-child(5) { animation-delay: .5s; }
+.hero__media { position: relative; overflow: hidden; border-radius: 4px; animation: curtain 1.1s .1s var(--ease-out) both; }
+.hero__media img { animation: slow-zoom 2.4s .1s var(--ease-out) both; translate: 0 calc(var(--py, 0) * 1px); will-change: translate; }
+.eyebrow::before { content: ""; display: inline-block; width: 2rem; height: 2px; background: currentColor; margin-right: .6rem; vertical-align: middle; transform-origin: left; animation: line-draw .8s .35s var(--ease-out) both; }
+.page-header .container > * { animation: fade-up .7s var(--ease-out) both; }
+.page-header .container > :nth-child(2) { animation-delay: .08s; }
+.page-header .container > :nth-child(3) { animation-delay: .16s; }
+.page-header .container > :nth-child(4) { animation-delay: .24s; }
+
+/* scroll reveal: stagger siblings via --d (set by JS) */
+.reveal-ready [data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease-out), transform .8s var(--ease-out); transition-delay: calc(var(--d, 0) * 90ms); }
+.reveal-ready [data-reveal].is-visible { opacity: 1; transform: none; }
+.section__head h2 { position: relative; padding-bottom: .9rem; }
+.section__head h2::after { content: ""; position: absolute; left: 0; bottom: 0; width: 3.5rem; height: 3px; background: var(--c-primary); transform: scaleX(1); transform-origin: left; transition: transform .9s .25s var(--ease-out); }
+.reveal-ready .section__head:not(.is-visible) h2::after { transform: scaleX(0); }
+
+/* cards and images: lift, zoom, nudge */
+.card { transition: background-color .3s, transform .4s var(--ease-out), box-shadow .4s var(--ease-out); }
+.card:hover { transform: translateY(-4px); box-shadow: 0 22px 40px -22px rgba(16, 24, 40, .35); position: relative; z-index: 1; }
+.card .icon { transition: transform .4s var(--ease-out); }
+.card:hover .icon { transform: scale(1.12) rotate(-4deg); }
+.arrow-link .icon, .btn .icon { transition: transform .3s var(--ease-out); }
+.arrow-link:hover .icon, .card:hover .arrow-link .icon, .btn:hover .icon { transform: translateX(5px); }
+.split__media, .catalogue-detail__media { overflow: hidden; border-radius: 4px; }
+.split__media img, .catalogue-detail__media img { transition: transform 1.1s var(--ease-out); }
+.split__media:hover img, .catalogue-detail__media:hover img { transform: scale(1.045); }
+
+/* buttons: press, arrow slide, light sheen on the primary */
+.btn { transition: transform .25s var(--ease-out), background-color .25s, box-shadow .25s, color .25s, border-color .25s; position: relative; overflow: hidden; }
+.btn:hover { transform: translateY(-2px); }
+.btn:active { transform: translateY(0) scale(.98); }
+.btn--primary::after { content: ""; position: absolute; top: 0; bottom: 0; left: 0; width: 40%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .28), transparent); transform: translateX(-120%) skewX(-18deg); pointer-events: none; }
+.btn--primary:hover::after { animation: sheen .8s var(--ease-out); }
+
+/* stats and call-to-action */
+.stats strong { transition: color .3s; }
+.stats__row li { transition: transform .4s var(--ease-out), border-color .3s; }
+.stats__row li:hover { transform: translateX(4px); }
+.cta { background-image: linear-gradient(115deg, transparent 0%, rgba(255, 255, 255, .11) 50%, transparent 100%); background-size: 240% 100%; animation: drift 14s ease-in-out infinite; }
+
+/* floating WhatsApp / back-to-top feel */
+.wa-float { transition: transform .3s var(--ease-out), box-shadow .3s; }
+.wa-float:hover { transform: translateY(-3px) scale(1.06); }
+
+@media (prefers-reduced-motion: reduce) {
+  main, .hero__copy > *, .hero__media, .hero__media img, .eyebrow::before, .page-header .container > *, .cta { animation: none !important; }
+  .hero__media img { translate: none; scale: 1; }
+  .reveal-ready [data-reveal] { opacity: 1; transform: none; }
+  .reveal-ready .section__head:not(.is-visible) h2::after { transform: scaleX(1); }
+}
+
+/* phones and tablets: message and buttons first, photo after */
+@media (max-width: 900px) {
+  .hero__media { order: 1; }
+  .hero__grid { gap: 2rem; }
+}
+@media (max-width: 640px) {
+  .hero .btn-row .btn { flex: 1 1 100%; justify-content: center; }
+}
