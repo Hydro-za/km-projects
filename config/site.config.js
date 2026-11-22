@@ -33,8 +33,8 @@ module.exports = {
       src: "assets/img/km-projects-logo.svg", // Supplied KM Projects logo.
       srcOnDark: "",
       alt: "KM Projects",
-      width: 220,
-      height: 74,
+      width: 260,
+      height: 55,
       mark: "KM", // letter used for the "text" type and the generated favicon
     },
   },
