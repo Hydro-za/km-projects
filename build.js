@@ -621,8 +621,8 @@ ${p.seo.keywords?.length ? `<meta name="keywords" content="${attr(p.seo.keywords
 <meta name="theme-color" content="${attr(C.theme.colors.primary)}">
 <link rel="canonical" href="${attr(canonical)}">
 <link rel="icon" href="${attr(prefixFor(key))}favicon.svg" type="image/svg+xml">
-<link rel="alternate icon" href="${attr(prefixFor(key))}assets/img/apple-touch-icon.png" type="image/png">
-<link rel="apple-touch-icon" sizes="180x180" href="${attr(prefixFor(key))}assets/img/apple-touch-icon.png">
+<link rel="alternate icon" href="${attr(prefixFor(key))}favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${attr(prefixFor(key))}favicon.svg">
 <link rel="manifest" href="${attr(prefixFor(key))}site.webmanifest">
 <meta name="apple-mobile-web-app-title" content="${attr(biz.name)}">
 <meta name="application-name" content="${attr(biz.name)}">
@@ -672,15 +672,13 @@ ${footer(from).replace(/href="\.\//g, 'href="/')}</body></html>
 }
 
 function faviconSvg() {
-  // Use the configured logo when it is an SVG file; otherwise generate a badge from the brand colour and mark.
-  const L = biz.logo || {};
-  const candidate = L.favicon || L.src;
-  if (candidate && /\.svg$/i.test(candidate) && hasFile(candidate) && L.type !== "text") {
-    return fs.readFileSync(path.join(SRC, candidate), "utf8");
-  }
-  const c = C.theme.colors;
-  const mark = esc((L.mark || biz.name[0] || "B").toString().slice(0, 2));
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="12" fill="${c.primary}"/><text x="32" y="44" text-anchor="middle" font-family="system-ui, Arial, sans-serif" font-size="34" font-weight="800" fill="${c.onPrimary}">${mark}</text></svg>\n`;
+  // Compact KM Projects house mark for browser tabs and pinned shortcuts.
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="#08752b"/>
+    <path d="M7 31 32 11l25 20h-7L32 19 14 31Z" fill="#fff"/>
+    <path d="M17 31v22h11V38l4 4 5-4v15h10V31L32 20Z" fill="#fff"/>
+    <path d="M28 42h8v11h-8z" fill="#08752b"/>
+  </svg>\n`;
 }
 function webManifest() {
   return JSON.stringify({
