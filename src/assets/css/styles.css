@@ -583,3 +583,30 @@ main { animation: page-in .5s var(--ease-out) both; }
 .site-footer .footer__credit a:hover { color: #43a85b !important; }
 .cta { background: #176b2c !important; }
 .cta a:not(.btn) { color: #ffffff; }
+
+
+/* KM Projects launch layout: desktop header, five service cards and tidy page rhythm. */
+@media (min-width: 1001px) {
+  .site-header__inner { min-height: 6.1rem; gap: 1.5rem; }
+  .site-header .brand { flex: 0 1 17rem; min-width: 0; }
+  .site-header .brand__logo { display: block; width: 100%; height: auto; max-width: 17rem; max-height: 4.1rem; object-fit: contain; }
+  .site-nav { gap: clamp(1rem, 1.7vw, 1.8rem); }
+  .site-nav ul { gap: clamp(1rem, 1.7vw, 1.8rem); }
+  .page-home .cards--4 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .page-home .cards--4 .card { padding: 1.35rem 1.1rem; }
+  .page-home .cards--4 .card h3 { font-size: 1.08rem; line-height: 1.25; }
+  .page-home .cards--4 .card p { font-size: .9rem; line-height: 1.5; }
+}
+@media (min-width: 641px) and (max-width: 1000px) {
+  .site-header .brand__logo { width: auto; height: auto; max-width: 13rem; max-height: 3.5rem; object-fit: contain; }
+  .page-home .cards--4 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .site-header .brand__logo { width: auto; height: auto; max-width: min(12rem, 52vw); max-height: 2.7rem; object-fit: contain; }
+  .page-home .cards--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .page-home .cards--4 .card { padding: 1.15rem .95rem; }
+  .page-home .cards--4 .card h3 { font-size: 1rem; line-height: 1.25; }
+  .page-home .cards--4 .card p { font-size: .9rem; }
+}
+/* Service imagery uses a consistent crop without stretching. */
+.detail__media img, .split__media img { display: block; width: 100%; height: 100%; min-height: 18rem; object-fit: cover; object-position: center; }
