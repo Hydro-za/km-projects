@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 308" role="img" aria-labelledby="t">
-<title id="t">KM Projects</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 308" role="img" aria-labelledby="title">
+<title id="title">KM Projects</title>
 <g>
 <path fill="#08752b" d="M2 158 164 42 327 158 297 158 164 74 34 158Z"/>
 <path fill="#08752b" d="M227 95h30v24l-30-21Z M164 74V35h14v49Z"/>
@@ -7,6 +7,6 @@
 <path fill="#08752b" d="M160 153l48 52 55-44v125h-31v-69l-24 20-48-45Z"/>
 <path fill="#242424" d="M145 115h17v17h-17zM165 115h17v17h-17zM145 135h17v17h-17zM165 135h17v17h-17z"/>
 <path fill="#08752b" d="M300 18h7v270h-7z"/>
-<text x="335" y="217" fill="#242424" font-family="Arial,Helvetica,sans-serif" font-size="166" font-weight="900" letter-spacing="-13">KM</text>
-<text x="548" y="217" fill="#08752b" font-family="Arial,Helvetica,sans-serif" font-size="126" font-weight="900" letter-spacing="-5">PROJECTS</text>
+<text x="335" y="217" fill="#242424" font-family="Arial,Helvetica,sans-serif" font-size="166" font-weight="800" letter-spacing="-10">KM</text>
+<text x="548" y="217" fill="#08752b" font-family="Arial,Helvetica,sans-serif" font-size="126" font-weight="800" letter-spacing="-4">PROJECTS</text>
 </g></svg>
