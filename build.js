@@ -492,7 +492,7 @@ function header(from) {
 function footer(from) {
   const cols = {
     explore: `<div><h2 class="footer__h">Explore</h2><ul>${C.nav.items.map((i) => `<li><a href="${attr(linkTo(from, i.page))}">${esc(i.label)}</a></li>`).join("")}</ul></div>`,
-    contact: ((ct.phone && ct.phoneHref) || ct.email || ct.address?.street || ct.address?.locality || ct.social?.length) ? `<div><h2 class="footer__h">Contact</h2><ul>
+    contact: ((ct.phone && ct.phoneHref) || ct.email || waLink() || ct.address?.street || ct.address?.locality || ct.social?.length) ? `<div><h2 class="footer__h">Contact</h2><ul>
       ${ct.phone && ct.phoneHref ? `<li><a href="tel:${attr(ct.phoneHref)}">${esc(ct.phone)}</a></li>` : ""}
       ${ct.email ? `<li><a href="mailto:${attr(ct.email)}">${esc(ct.email)}</a></li>` : ""}
       ${ct.address?.street || ct.address?.locality ? `<li><address>${addressLines().map(esc).join("<br>")}</address></li>` : ""}
