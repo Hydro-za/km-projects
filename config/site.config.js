@@ -33,7 +33,7 @@ module.exports = {
     // srcOnDark: optional light version for the dark footer. Without it the logo sits on a white tile.
     logo: {
       type: "image",
-      src: "assets/img/km-projects-logo.png", // PLACEHOLDER: add the supplied KM Projects logo file at this path.
+      src: "assets/img/km-projects-logo.svg", // PLACEHOLDER: add the supplied KM Projects logo file at this path.
       srcOnDark: "",
       alt: "KM Projects",
       width: 220,
@@ -52,7 +52,7 @@ module.exports = {
     // Keep false until real content is in place. true = indexable by search engines.
     indexable: false,
     outputDir: "dist",
-    ogImage: "assets/img/og-default.png", // 1200x630 PNG/JPG for social sharing
+    ogImage: "assets/img/og-default.svg", // 1200x630 PNG/JPG for social sharing
     titleSeparator: " | ",
   },
 
