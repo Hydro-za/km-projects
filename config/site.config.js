@@ -167,7 +167,7 @@ module.exports = {
         name: "Residential Construction",
         summary: "New homes built with practical planning, solid workmanship and attention to detail.",
         description: "From foundations and brickwork to roofing and finishes, residential builds are managed with a focus on sound construction and a clear scope of work.",
-        benefits: ["A clear project brief", "Practical planning and coordination", "Considered material and finish choices"],
+        benefits: ["A clear project brief", "Practical planning and coordination", "Materials and finishes suited to the project scope"],
         price: null,
         cta: "Discuss a residential project",
         featured: true,
@@ -179,7 +179,7 @@ module.exports = {
         name: "Commercial Projects",
         summary: "Construction and building improvements for commercial properties and business premises.",
         description: "Commercial projects are planned around the property's requirements, site conditions, construction work and practical handover needs.",
-        benefits: ["Function-led space planning", "Coordination around project requirements", "Durable, considered finishes"],
+        benefits: ["Practical planning for commercial properties", "Coordination around project requirements", "Durable, suitable finishes"],
         price: null,
         cta: "Discuss a commercial project",
         featured: true,
@@ -225,8 +225,8 @@ module.exports = {
     home: {
       slug: "",
       seo: {
-        title: "Aurel Construction | Refined Building & Design",
-        description: "Aurel Construction brings a considered approach to residential builds, commercial spaces and renovations across Durban and KwaZulu-Natal.",
+        title: "Aurel Construction | Building & Construction Durban",
+        description: "Aurel Construction provides residential building, commercial construction, renovations and extensions in Durban and KwaZulu-Natal.",
         keywords: ["construction Durban", "residential construction", "commercial building", "renovations KwaZulu-Natal"],
       },
       sections: [
@@ -237,7 +237,7 @@ module.exports = {
           text: "From new homes and commercial buildings to renovations and extensions, we help turn building plans into completed projects.",
           primaryCta: { label: "Discuss your project", page: "contact", query: "?enquiry=quote" },
           secondaryCta: { label: "Explore our work", page: "services" },
-          highlights: ["Residential & commercial", "Renovations & extensions", "A considered project process"],
+          highlights: ["Residential & commercial", "Renovations & extensions", "A clear project process"],
           image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=88", alt: "Building structure under construction", width: 1800, height: 1400 },
         },
         {
@@ -266,7 +266,7 @@ module.exports = {
           items: [
             { icon: "compass", title: "Proper preparation", text: "A clear understanding of the brief, priorities and practical requirements before work begins." },
             { icon: "layers", title: "Organised site management", text: "A joined-up approach to the moving parts that bring a construction project together." },
-            { icon: "eye", title: "Quality workmanship", text: "Material choices, proportions and finishes are considered as part of the whole." },
+            { icon: "eye", title: "Quality workmanship", text: "Materials, construction methods and finishes are selected to suit the project requirements." },
             { icon: "message-circle", title: "Straightforward communication", text: "Straightforward updates help keep decisions, expectations and next steps visible." },
           ],
         },
@@ -283,8 +283,8 @@ module.exports = {
     about: {
       slug: "about",
       seo: {
-        title: "About Aurel | A Considered Approach",
-        description: "Discover Aurel Construction's considered approach to planning, coordination and craftsmanship across residential and commercial projects.",
+        title: "About Aurel | Construction Company in Durban",
+        description: "Learn about Aurel Construction's approach to residential building, commercial projects, renovations and site coordination in Durban.",
         keywords: ["about Aurel Construction", "construction approach", "building company Durban"],
       },
       sections: [
@@ -305,8 +305,8 @@ module.exports = {
         },
         {
           type: "missionVision",
-          mission: { heading: "Our purpose", text: "To make the building process more considered, understandable and connected to the needs of the people who use each space." },
-          vision: { heading: "Our perspective", text: "A built environment where thoughtful design, practical construction and enduring materials work together." },
+          mission: { heading: "Our purpose", text: "To make construction projects easier to plan and manage through clear scopes, practical coordination and straightforward communication." },
+          vision: { heading: "Our perspective", text: "A construction industry where sound preparation, dependable workmanship and clear communication are standard." },
         },
         {
           type: "values",
@@ -315,13 +315,13 @@ module.exports = {
           items: [
             { title: "Clarity", text: "A shared understanding of the brief, scope and decisions ahead." },
             { title: "Craft", text: "Care for the materials, junctions and finishes that shape the result." },
-            { title: "Consideration", text: "Respect for the site, the people involved and the way a space will be used." },
+            { title: "Preparation", text: "Understand the site, scope, materials and practical requirements before work begins." },
             { title: "Accountability", text: "A practical, transparent approach to communication and coordination." },
           ],
         },
         {
           type: "differentiators",
-          eyebrow: "A considered process",
+          eyebrow: "Our process",
           heading: "A strong result starts long before the build.",
           items: [
             { title: "Understand the brief", text: "Start with the purpose of the space, the priorities and the constraints." },
@@ -349,15 +349,15 @@ module.exports = {
         {
           type: "pageHeader",
           eyebrow: "Our services",
-          heading: "The right team for the next stage of your space.",
-          text: "From a new build to a considered renovation, each project begins with a clear brief and a practical plan.",
+          heading: "Building services for your next project.",
+          text: "From a new build to a renovation or extension, each project begins with a clear scope and practical plan.",
         },
         { type: "catalogueDetail" },
         {
           type: "process",
           eyebrow: "How we work",
           heading: "A clear path from idea to completion.",
-          intro: "A considered process helps make complex projects easier to understand and manage.",
+          intro: "A clear process helps keep construction work organised and easier to manage.",
           items: [
             { title: "01 · Discover", text: "We begin by understanding your goals, site, priorities and the scope of work." },
             { title: "02 · Define", text: "The brief is shaped into a practical direction, with key decisions and requirements identified." },
@@ -370,7 +370,7 @@ module.exports = {
           eyebrow: "Useful to know",
           heading: "A few common questions.",
           items: [
-            { q: "What types of projects do you take on?", a: "The Aurel concept covers residential construction, commercial spaces, renovations and extensions. The suitability of a project depends on its scope and requirements." },
+            { q: "What types of projects do you take on?", a: "Aurel Construction's services cover residential building, commercial projects, renovations and extensions. The suitability of a project depends on its scope and requirements." },
             { q: "Can I discuss an early-stage idea?", a: "Yes. An initial enquiry can outline the idea, location, approximate scope and what you would like to achieve." },
             { q: "Do you work from existing plans?", a: "Project discussions can start with existing drawings, a written brief or an early concept. The next steps depend on the information available." },
             { q: "How is a project quotation prepared?", a: "A useful quotation depends on a defined scope, specifications and site information. These details are reviewed before pricing is confirmed." },
@@ -379,7 +379,7 @@ module.exports = {
         {
           type: "cta",
           heading: "Every project starts with a conversation.",
-          text: "Tell us about the space, the scope and what a successful result looks like to you.",
+          text: "Tell us about the property, the work required and what you would like to achieve.",
           primaryCta: { label: "Request a consultation", page: "contact", query: "?enquiry=quote" },
         },
       ],
