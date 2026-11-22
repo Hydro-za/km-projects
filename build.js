@@ -367,7 +367,7 @@ R.contactMain = (s, from) => {
   const options = F.enquiryTypes.map((t) => `<option value="${attr(t)}">${esc(t)}</option>`).join("");
   return `
 <section class="section">
-  <div class="container contact">
+  <div class="container contact${((ct.phone && ct.phoneHref) || ct.email || wa || ct.address?.street || ct.address?.locality || ct.hours?.length || ct.social?.length) ? "" : " contact--solo"}">
     <div class="contact__form"${reveal}>
       <h2>Send an enquiry</h2>
       <form id="contact-form" novalidate
@@ -411,19 +411,18 @@ R.contactMain = (s, from) => {
         <p class="form-note">${esc(F.privacyNote)}</p>
         <button class="btn btn--primary" type="submit">Send enquiry</button>
         <div class="form-status" id="form-status" role="status" aria-live="polite" tabindex="-1"></div>
-        <noscript><p class="form-status form-status--info">This form needs JavaScript. Please email <a href="mailto:${attr(ct.email)}">${esc(ct.email)}</a> instead.</p></noscript>
+        <noscript><p class="form-status form-status--info">${ct.email ? `This form needs JavaScript. Please email <a href="mailto:${attr(ct.email)}">${esc(ct.email)}</a> instead.` : "This demo form needs JavaScript and is not connected to an email address yet."}</p></noscript>
       </form>
     </div>
     <aside class="contact__details" aria-label="Contact details"${reveal}>
       <h2>Get in touch</h2>
       <ul class="detail-links">
-        <li>${icon("phone")}<div><span class="label">Phone</span><a href="tel:${attr(ct.phoneHref)}">${esc(ct.phone)}</a></div></li>
-        <li>${icon("mail")}<div><span class="label">Email</span><a href="mailto:${attr(ct.email)}">${esc(ct.email)}</a></div></li>
+        ${ct.phone && ct.phoneHref ? `<li>${icon("phone")}<div><span class="label">Phone</span><a href="tel:${attr(ct.phoneHref)}">${esc(ct.phone)}</a></div></li>` : ""}
+        ${ct.email ? `<li>${icon("mail")}<div><span class="label">Email</span><a href="mailto:${attr(ct.email)}">${esc(ct.email)}</a></div></li>` : ""}
         ${wa ? `<li>${icon("whatsapp")}<div><span class="label">WhatsApp</span><a class="btn btn--whatsapp" href="${attr(wa)}" target="_blank" rel="noopener noreferrer">Chat on WhatsApp<span class="visually-hidden"> (opens in a new tab)</span></a></div></li>` : ""}
-        <li>${icon("pin")}<div><span class="label">Address</span><address>${addressLines().map(esc).join("<br>")}</address>${ct.mapLink ? `<a class="arrow-link" href="${attr(ct.mapLink)}" target="_blank" rel="noopener noreferrer">Open in Google Maps${icon("arrow", "icon icon--sm")}</a>` : ""}</div></li>
+        ${ct.address?.street || ct.address?.locality ? `<li>${icon("pin")}<div><span class="label">Address</span><address>${addressLines().map(esc).join("<br>")}</address>${ct.mapLink ? `<a class="arrow-link" href="${attr(ct.mapLink)}" target="_blank" rel="noopener noreferrer">Open in Google Maps${icon("arrow", "icon icon--sm")}</a>` : ""}</div></li>` : ""}
       </ul>
-      <h3>Opening hours</h3>
-      ${hoursList()}
+      ${ct.hours?.length ? `<h3>Opening hours</h3>${hoursList()}` : ""}
       ${ct.social?.length ? `<h3>Follow us</h3>${socialLinks()}` : ""}
     </aside>
   </div>
@@ -462,8 +461,8 @@ function topbar() {
 <div class="topbar"><div class="container topbar__inner">
   ${note ? `<p class="topbar__note">${esc(note)}</p>` : "<span></span>"}
   <ul class="topbar__links">
-    <li><a href="tel:${attr(ct.phoneHref)}">${icon("phone", "icon icon--sm")}${esc(ct.phone)}</a></li>
-    ${T.showEmail !== false ? `<li><a href="mailto:${attr(ct.email)}">${icon("mail", "icon icon--sm")}${esc(ct.email)}</a></li>` : ""}
+    ${ct.phone && ct.phoneHref ? `<li><a href="tel:${attr(ct.phoneHref)}">${icon("phone", "icon icon--sm")}${esc(ct.phone)}</a></li>` : ""}
+    ${T.showEmail !== false && ct.email ? `<li><a href="mailto:${attr(ct.email)}">${icon("mail", "icon icon--sm")}${esc(ct.email)}</a></li>` : ""}
   </ul>
 </div></div>`;
 }
@@ -493,12 +492,12 @@ function header(from) {
 function footer(from) {
   const cols = {
     explore: `<div><h2 class="footer__h">Explore</h2><ul>${C.nav.items.map((i) => `<li><a href="${attr(linkTo(from, i.page))}">${esc(i.label)}</a></li>`).join("")}</ul></div>`,
-    contact: `<div><h2 class="footer__h">Contact</h2><ul>
-      <li><a href="tel:${attr(ct.phoneHref)}">${esc(ct.phone)}</a></li>
-      <li><a href="mailto:${attr(ct.email)}">${esc(ct.email)}</a></li>
-      <li><address>${addressLines().map(esc).join("<br>")}</address></li>
-    </ul>${socialLinks("social social--footer")}</div>`,
-    hours: `<div><h2 class="footer__h">Opening hours</h2>${hoursList()}</div>`,
+    contact: ((ct.phone && ct.phoneHref) || ct.email || ct.address?.street || ct.address?.locality || ct.social?.length) ? `<div><h2 class="footer__h">Contact</h2><ul>
+      ${ct.phone && ct.phoneHref ? `<li><a href="tel:${attr(ct.phoneHref)}">${esc(ct.phone)}</a></li>` : ""}
+      ${ct.email ? `<li><a href="mailto:${attr(ct.email)}">${esc(ct.email)}</a></li>` : ""}
+      ${ct.address?.street || ct.address?.locality ? `<li><address>${addressLines().map(esc).join("<br>")}</address></li>` : ""}
+    </ul>${socialLinks("social social--footer")}</div>` : "",
+    hours: ct.hours?.length ? `<div><h2 class="footer__h">Opening hours</h2>${hoursList()}</div>` : "",
   };
   const year = new Date().getFullYear();
   return `
