@@ -554,3 +554,15 @@ main { animation: page-in .5s var(--ease-out) both; }
   .page-header h1, .cta h2 { overflow-wrap: break-word; }
   .map iframe { height: 17rem; }
 }
+
+
+/* KM Projects brand override: keep the floating WhatsApp action green on every page. */
+.wa-float,
+.wa-float:visited,
+.wa-float:focus-visible { background-color: #08752b !important; color: #ffffff !important; }
+.wa-float:hover,
+.wa-float:active { background-color: #065d22 !important; color: #ffffff !important; }
+.btn--whatsapp,
+.btn--whatsapp:visited { background-color: #08752b !important; color: #ffffff !important; }
+.btn--whatsapp:hover,
+.btn--whatsapp:active { background-color: #065d22 !important; color: #ffffff !important; }
