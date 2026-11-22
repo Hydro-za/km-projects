@@ -206,7 +206,11 @@
 
     // No backend connected yet: be honest, offer a pre-filled email.
     if (!data.endpoint) {
-      show("info", data.msgNotconnected, mailtoLink(values));
+      if (data.mailto) {
+        show("info", data.msgNotconnected, mailtoLink(values));
+      } else {
+        show("info", "This demo enquiry form is not connected yet. Add a business email address or connect a form service before launch.");
+      }
       return;
     }
 
@@ -235,7 +239,7 @@
         show("success", data.msgSuccess);
       })
       .catch(function () {
-        show("error", data.msgError, mailtoLink(values));
+        show("error", data.msgError, data.mailto ? mailtoLink(values) : null);
       })
       .then(function () {
         if (timer) clearTimeout(timer);
