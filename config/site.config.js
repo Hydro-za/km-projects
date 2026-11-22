@@ -69,7 +69,7 @@ module.exports = {
       muted: "#77766F",
       line: "#DEDAD1",
       surface: "#F1EFE9",
-      background: "#FAF9F6
+      background: "#FAF9F6",
     },
     fonts: {
       // Modern sans-serif pairing with system-font fallbacks.
@@ -219,8 +219,6 @@ module.exports = {
 
   /* ------------------------------------------------------------------ */
   /* PAGES: SEO + ordered sections                                       */
-  /* Reorder, remove or duplicate sections freely. Each is {type,...}.   */
-  /* ------------------------------------------------------------------ */                                       */
   /* Reorder, remove or duplicate sections freely. Each is {type,...}.   */
   /* ------------------------------------------------------------------ */
   pages: {
