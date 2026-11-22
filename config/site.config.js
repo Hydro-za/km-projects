@@ -17,8 +17,8 @@ module.exports = {
     name: "AUREL CONSTRUCTION",
     legalName: "Aurel Construction",
     industry: "Construction & property development",
-    tagline: "Considered construction. Enduring spaces.",
-    shortDescription: "A design-led construction studio shaping refined residential, commercial and renovation spaces.",
+    tagline: "Reliable building. Quality workmanship.",
+    shortDescription: "A professional construction company handling residential builds, commercial projects and renovations across Durban and KwaZulu-Natal.",
     foundedYear: null, // e.g. 2012. Leave null to hide "since" mentions.
     // Schema.org type. Use the most specific one that fits, e.g. "HomeAndConstructionBusiness",
     // "Dentist", "Restaurant", "LegalService", "Store", "AutoRepair", "ProfessionalService".
@@ -61,15 +61,15 @@ module.exports = {
   /* ------------------------------------------------------------------ */
   theme: {
     colors: {
-      primary: "#292A26",
-      primaryDark: "#171815",
+      primary: "#243447",
+      primaryDark: "#172333",
       onPrimary: "#ffffff",
-      accent: "#B18A58",
-      ink: "#252621",
-      muted: "#77766F",
-      line: "#DEDAD1",
-      surface: "#F1EFE9",
-      background: "#FAF9F6",
+      accent: "#2874A6",
+      ink: "#202B36",
+      muted: "#687582",
+      line: "#D9E0E6",
+      surface: "#F1F4F6",
+      background: "#FFFFFF",
     },
     fonts: {
       // Modern sans-serif pairing with system-font fallbacks.
@@ -115,7 +115,7 @@ module.exports = {
   /* NAVIGATION + FOOTER                                                 */
   /* ------------------------------------------------------------------ */
   // Slim contact strip above the header. enabled: false removes it.
-  topBar: { enabled: true, message: "DESIGN-LED CONSTRUCTION  /  DURBAN, SOUTH AFRICA", showHours: false, showEmail: false },
+  topBar: { enabled: true, message: "BUILDING & CONSTRUCTION  /  DURBAN, SOUTH AFRICA", showHours: false, showEmail: false },
 
   nav: {
     items: [
@@ -127,7 +127,7 @@ module.exports = {
     cta: { label: "Get a quote", page: "contact", query: "?enquiry=quote" },
   },
   footer: {
-    blurb: "Considered construction for spaces designed to be lived in, worked in and remembered.",
+    blurb: "Practical construction services for homes, businesses and property improvements.",
     columns: ["explore", "contact", "hours"], // order of footer columns
     legal: "All rights reserved.",
     extraLinks: [], // e.g. { label: "Privacy policy", href: "/privacy" } (page must exist)
@@ -165,37 +165,37 @@ module.exports = {
         id: "residential-construction",
         icon: "house",
         name: "Residential Construction",
-        summary: "Thoughtful new-build homes shaped around the people who live in them.",
-        description: "From early planning through to the finishing details, residential projects are approached with a focus on function, proportion, materials and the way each space will be used.",
+        summary: "New homes built with practical planning, solid workmanship and attention to detail.",
+        description: "From foundations and brickwork to roofing and finishes, residential builds are managed with a focus on sound construction and a clear scope of work.",
         benefits: ["A clear project brief", "Practical planning and coordination", "Considered material and finish choices"],
         price: null,
         cta: "Discuss a residential project",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85", alt: "Contemporary residential architecture", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85", alt: "Active building site with a building under construction", width: 1200, height: 900 },
       },
       {
         id: "commercial-projects",
         icon: "building-2",
         name: "Commercial Projects",
-        summary: "Purposeful spaces for businesses, teams and customers.",
-        description: "Commercial environments need to balance practical requirements with a coherent experience. The brief, layout, materials and delivery sequence all contribute to the finished space.",
+        summary: "Construction and building improvements for commercial properties and business premises.",
+        description: "Commercial projects are planned around the property's requirements, site conditions, construction work and practical handover needs.",
         benefits: ["Function-led space planning", "Coordination around project requirements", "Durable, considered finishes"],
         price: null,
         cta: "Discuss a commercial project",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85", alt: "Contemporary commercial workspace", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85", alt: "Construction workers carrying out building work on site", width: 1200, height: 900 },
       },
       {
         id: "renovations-extensions",
         icon: "hammer",
         name: "Renovations & Extensions",
-        summary: "Rework existing spaces to better suit changing needs.",
-        description: "A renovation is an opportunity to improve how a property works without losing sight of its character. Each scope is considered in relation to the existing structure, priorities and practical constraints.",
+        summary: "Upgrade, repair or extend existing homes and buildings.",
+        description: "Renovation and extension work can include structural changes, new rooms, repairs and updated finishes, depending on the property and agreed scope.",
         benefits: ["Respect for the existing property", "Clear scope and finish decisions", "Improvements focused on everyday use"],
         price: null,
         cta: "Discuss a renovation",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85", alt: "Refined renovated living space", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1200&q=85", alt: "Construction work taking place on a building site", width: 1200, height: 900 },
       },
       {
         id: "project-coordination",
@@ -203,11 +203,11 @@ module.exports = {
         name: "Project Coordination",
         summary: "Keep decisions, sequencing and communication connected.",
         description: "Good coordination helps keep the wider project in view. Scope, key decisions, site activity and finishing requirements are considered as connected parts of the work.",
-        benefits: ["Clear communication points", "Practical sequencing of work", "Attention to the overall brief"],
+        benefits: ["Straightforward communication points", "Practical sequencing of work", "Attention to the overall brief"],
         price: null,
         cta: "Discuss project coordination",
         featured: false,
-        image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85", alt: "Construction team reviewing work on site", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85", alt: "Construction workers on an active building site", width: 1200, height: 900 },
       },
     ],
     pricing: {
@@ -233,41 +233,41 @@ module.exports = {
         {
           type: "hero",
           eyebrow: "Construction · Development · Renovation",
-          headline: "Built with intention. Made to endure.",
-          text: "A considered approach to residential and commercial construction, where thoughtful planning meets lasting craftsmanship.",
+          headline: "Building work done properly.",
+          text: "From new homes and commercial buildings to renovations and extensions, we help turn building plans into completed projects.",
           primaryCta: { label: "Discuss your project", page: "contact", query: "?enquiry=quote" },
           secondaryCta: { label: "Explore our work", page: "services" },
           highlights: ["Residential & commercial", "Renovations & extensions", "A considered project process"],
-          image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=88", alt: "Contemporary residence with refined architectural detailing", width: 1800, height: 1400 },
+          image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=88", alt: "Building structure under construction", width: 1800, height: 1400 },
         },
         {
           type: "intro",
-          eyebrow: "A more considered way to build",
-          heading: "Good spaces begin with good decisions.",
+          eyebrow: "Construction you can rely on",
+          heading: "Every solid build starts with good preparation.",
           paragraphs: [
-            "From the first conversation to the final finish, every project deserves clear thinking, careful coordination and attention to the details that shape how a space feels.",
-            "Aurel brings construction, practical planning and a design-conscious perspective together to help turn considered ideas into places with purpose.",
+            "Every project needs a clear scope, practical planning, organised site work and attention to the details that affect the finished result.",
+            "Aurel Construction focuses on straightforward building work, clear communication and keeping each project moving from start to finish.",
           ],
           link: { label: "Discover our approach", page: "about" },
-          image: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88", alt: "Warm, minimal interior with natural materials", width: 1400, height: 1050 },
+          image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=88", alt: "Construction team working on site", width: 1400, height: 1050 },
         },
         {
           type: "catalogue",
           eyebrow: "What we do",
-          heading: "Spaces shaped around the brief.",
-          intro: "A focused range of construction services for new spaces, evolving properties and more considered ways of working.",
+          heading: "Construction services for every stage.",
+          intro: "Building services for new residential and commercial projects, renovations and extensions.",
           featuredOnly: true,
           link: { label: "View all services", page: "services" },
         },
         {
           type: "features",
-          eyebrow: "The Aurel approach",
-          heading: "The details make the difference.",
+          eyebrow: "How we work",
+          heading: "A well-managed build makes the difference.",
           items: [
-            { icon: "compass", title: "Thoughtful planning", text: "A clear understanding of the brief, priorities and practical requirements before work begins." },
-            { icon: "layers", title: "Careful coordination", text: "A joined-up approach to the moving parts that bring a construction project together." },
-            { icon: "eye", title: "Attention to detail", text: "Material choices, proportions and finishes are considered as part of the whole." },
-            { icon: "message-circle", title: "Clear communication", text: "Straightforward updates help keep decisions, expectations and next steps visible." },
+            { icon: "compass", title: "Proper preparation", text: "A clear understanding of the brief, priorities and practical requirements before work begins." },
+            { icon: "layers", title: "Organised site management", text: "A joined-up approach to the moving parts that bring a construction project together." },
+            { icon: "eye", title: "Quality workmanship", text: "Material choices, proportions and finishes are considered as part of the whole." },
+            { icon: "message-circle", title: "Straightforward communication", text: "Straightforward updates help keep decisions, expectations and next steps visible." },
           ],
         },
         {
@@ -291,17 +291,17 @@ module.exports = {
         {
           type: "pageHeader",
           eyebrow: "About Aurel",
-          heading: "Built around a better way of working.",
-          text: "A design-conscious construction concept grounded in practical thinking, clear communication and respect for the brief.",
+          heading: "A practical approach to construction.",
+          text: "A construction company focused on practical building solutions, reliable communication and quality work.",
         },
         {
           type: "story",
-          heading: "A clear vision, carefully carried through.",
+          heading: "From groundwork to completion.",
           paragraphs: [
-            "Aurel is presented as a modern construction studio for clients who value a thoughtful process as much as the finished space. The focus is on understanding the brief, resolving the details and keeping the work aligned with the original intent.",
-            "Rather than treating design and construction as separate conversations, the Aurel approach brings them together around the needs of each project.",
+            "Aurel Construction is a construction company serving residential and commercial clients. This demo website presents typical building services, from early site preparation and structural work through to finishing and handover.",
+            "Each project is approached according to its scope, site conditions, materials and practical requirements.",
           ],
-          image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88", alt: "Modern home with clean architectural lines and landscaped setting", width: 1400, height: 1050 },
+          image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=88", alt: "Building construction in progress", width: 1400, height: 1050 },
         },
         {
           type: "missionVision",
