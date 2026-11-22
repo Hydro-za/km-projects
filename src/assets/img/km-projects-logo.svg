@@ -1,12 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1450 308" role="img" aria-labelledby="title">
-<title id="title">KM Projects</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 400" role="img" aria-labelledby="km-title">
+<title id="km-title">KM Projects</title>
 <g>
-<path fill="#08752b" d="M2 158 164 42 327 158 297 158 164 74 34 158Z"/>
-<path fill="#08752b" d="M227 95h30v24l-30-21Z M164 74V35h14v49Z"/>
-<path fill="#242424" d="M45 286V162l28-17v141Z M73 222l87-69 30 19-84 69Z M103 240l36-28 51 74h-37Z"/>
-<path fill="#08752b" d="M160 153l48 52 55-44v125h-31v-69l-24 20-48-45Z"/>
-<path fill="#242424" d="M145 115h17v17h-17zM165 115h17v17h-17zM145 135h17v17h-17zM165 135h17v17h-17z"/>
-<path fill="#08752b" d="M300 18h7v270h-7z"/>
-<text x="335" y="217" fill="#242424" font-family="Arial,Helvetica,sans-serif" font-size="166" font-weight="800" letter-spacing="-10">KM</text>
-<text x="548" y="217" fill="#08752b" font-family="Arial,Helvetica,sans-serif" font-size="126" font-weight="800" letter-spacing="-4">PROJECTS</text>
-</g></svg>
+  <!-- House roof and chimney -->
+  <path d="M18 190 280 24 545 190" fill="none" stroke="#08752b" stroke-width="48" stroke-linecap="square" stroke-linejoin="miter"/>
+  <path d="M420 112V58h42v83" fill="#08752b"/>
+  <!-- Window -->
+  <g fill="#242424">
+    <rect x="278" y="130" width="42" height="42" rx="3"/>
+    <rect x="328" y="130" width="42" height="42" rx="3"/>
+    <rect x="278" y="180" width="42" height="42" rx="3"/>
+    <rect x="328" y="180" width="42" height="42" rx="3"/>
+  </g>
+  <!-- Stylised KM house monogram -->
+  <path d="M76 350V188l48-28v190Z" fill="#242424"/>
+  <path d="m124 272 110-88 42 32-106 84Z" fill="#242424"/>
+  <path d="m166 300 46-36 61 86h-56Z" fill="#242424"/>
+  <path d="m278 184 66 70 92-70v166h-49v-82l-43 34-66-69Z" fill="#08752b"/>
+  <!-- Divider -->
+  <path d="M565 34V366" stroke="#08752b" stroke-width="9"/>
+  <!-- Wordmark -->
+  <text x="625" y="286" fill="#242424" font-family="Arial, Helvetica, sans-serif" font-size="232" font-weight="900" letter-spacing="-15">KM</text>
+  <text x="930" y="286" fill="#08752b" font-family="Arial, Helvetica, sans-serif" font-size="180" font-weight="900" letter-spacing="-7">PROJECTS</text>
+</g>
+</svg>
