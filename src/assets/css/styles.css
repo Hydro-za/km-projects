@@ -476,3 +476,8 @@ main { animation: page-in .5s var(--ease-out) both; }
   .hero__media { clip-path: none !important; }
   .hero__media img { will-change: auto !important; }
 }
+
+
+/* Empty-state layout for demo contact pages with no configured business details. */
+.topbar__links:empty { display: none; }
+.contact--solo { grid-template-columns: minmax(0, 1fr); max-width: 56rem; }
