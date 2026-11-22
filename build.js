@@ -414,7 +414,7 @@ R.contactMain = (s, from) => {
         <noscript><p class="form-status form-status--info">${ct.email ? `This form needs JavaScript. Please email <a href="mailto:${attr(ct.email)}">${esc(ct.email)}</a> instead.` : "This demo form needs JavaScript and is not connected to an email address yet."}</p></noscript>
       </form>
     </div>
-    <aside class="contact__details" aria-label="Contact details"${reveal}>
+    <aside class="contact__details" aria-label="Contact details"${reveal}${((ct.phone && ct.phoneHref) || ct.email || wa || ct.address?.street || ct.address?.locality || ct.hours?.length || ct.social?.length) ? "" : " hidden"}>
       <h2>Get in touch</h2>
       <ul class="detail-links">
         ${ct.phone && ct.phoneHref ? `<li>${icon("phone")}<div><span class="label">Phone</span><a href="tel:${attr(ct.phoneHref)}">${esc(ct.phone)}</a></div></li>` : ""}
