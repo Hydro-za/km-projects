@@ -451,3 +451,28 @@ main { animation: page-in .5s var(--ease-out) both; }
 @media (max-width: 640px) {
   .hero .btn-row .btn { flex: 1 1 100%; justify-content: center; }
 }
+
+
+/* ---------- Final polish: touch input, accessibility and reduced motion ---------- */
+/* Hover treatments are reserved for devices that actually support hover. */
+@media (hover: none), (pointer: coarse) {
+  .card:hover { transform: none; box-shadow: none; }
+  .card:hover .icon { transform: none; }
+  .split__media:hover img, .catalogue-detail__media:hover img { transform: none; }
+  .btn:hover, .wa-float:hover { transform: none; }
+  .btn--primary:hover::after { animation: none; }
+  .stats__row li:hover { transform: none; }
+}
+
+/* Respect the system motion preference across scroll, transitions and keyframes. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto !important; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .hero__media { clip-path: none !important; }
+  .hero__media img { will-change: auto !important; }
+}
