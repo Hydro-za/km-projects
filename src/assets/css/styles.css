@@ -329,39 +329,38 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--c
 @media print { .wa-float, .topbar { display: none; } [data-reveal] { opacity: 1 !important; transform: none !important; } .site-header, .nav-toggle, .cta, .map { display: none; } body { background: #fff; } }
 
 
-/* ---------- Aurel Construction art direction ---------- */
+/* ---------- Aurel Construction: practical, professional direction ---------- */
 :root {
-  --max: 1240px;
-  --space-section: clamp(4.5rem, 9vw, 8rem);
+  --max: 1200px;
+  --space-section: clamp(3.5rem, 7vw, 6rem);
 }
-.site-header { background: rgba(250,249,246,.94); border-bottom-color: rgba(37,38,33,.10); }
-.brand__mark { border-radius: 0; letter-spacing: -.08em; }
-.brand__name { letter-spacing: .12em; text-transform: uppercase; font-size: .86rem; font-weight: 700; }
-.nav a { font-size: .78rem; letter-spacing: .12em; text-transform: uppercase; }
-.nav .btn { letter-spacing: .08em; }
-.hero { padding-top: clamp(2.5rem, 5vw, 4.75rem); }
-.hero h1 { max-width: 11ch; font-size: clamp(3rem, 6.4vw, 6rem); line-height: .99; letter-spacing: -.065em; }
-.hero__text { max-width: 31rem; line-height: 1.8; }
-.hero__media img { aspect-ratio: 1.12 / 1; object-fit: cover; }
-.hero__media::before { inset: 1rem -1rem -1rem 1rem; border-width: 1px; border-color: var(--c-accent); }
-.eyebrow { font-size: .7rem; letter-spacing: .2em; }
-.btn { letter-spacing: .035em; border-radius: 0; min-height: 3.25rem; padding-inline: 1.6rem; }
-.btn--primary { box-shadow: 0 8px 22px rgba(37,38,33,.10); }
-.section__head h2, .split__copy h2 { letter-spacing: -.045em; }
-.section--alt { background: #F1EFE9; }
-.cards { border-color: rgba(37,38,33,.13); background: rgba(37,38,33,.13); border-radius: 0; }
-.card { padding: clamp(1.6rem, 3vw, 2.5rem); }
-.card h3 { letter-spacing: -.025em; }
+.site-header { background: #fff; border-bottom: 1px solid #D9E0E6; }
+.brand__mark { border-radius: 4px; letter-spacing: -.04em; }
+.brand__name { letter-spacing: .035em; text-transform: none; font-size: .95rem; font-weight: 750; }
+.nav a { font-size: .9rem; letter-spacing: 0; text-transform: none; }
+.hero { padding-top: clamp(2rem, 4vw, 3.5rem); }
+.hero h1 { max-width: 13ch; font-size: clamp(2.7rem, 5.4vw, 5rem); line-height: 1.04; letter-spacing: -.045em; }
+.hero__text { max-width: 36rem; line-height: 1.7; }
+.hero__media img { aspect-ratio: 1.2 / 1; object-fit: cover; }
+.hero__media::before { display: none; }
+.eyebrow { font-size: .78rem; letter-spacing: .1em; }
+.btn { letter-spacing: 0; border-radius: 4px; min-height: 3rem; padding-inline: 1.35rem; }
+.btn--primary { box-shadow: none; }
+.section__head h2, .split__copy h2 { letter-spacing: -.03em; }
+.section--alt { background: #F1F4F6; }
+.cards { border-color: #D9E0E6; background: #D9E0E6; border-radius: 4px; }
+.card { padding: clamp(1.4rem, 2.5vw, 2rem); }
+.card h3 { letter-spacing: -.015em; }
 .card:hover { background: #fff; }
-.split__media img, .hero__media img, .catalogue-detail__media img { border-radius: 0; }
-.page-header { background: #F1EFE9; border-bottom-color: rgba(37,38,33,.12); }
-.page-header h1 { font-size: clamp(2.8rem, 5.8vw, 5.2rem); letter-spacing: -.055em; }
-.cta { background: #292A26; color: #FAF9F6; }
-.cta h2, .cta p { color: #FAF9F6; }
-.site-footer { background: #20211D; }
-.site-footer a { color: #E7E2D8; }
-.site-footer a:hover { color: #D0AE7E; }
+.split__media img, .hero__media img, .catalogue-detail__media img { border-radius: 4px; }
+.page-header { background: #F1F4F6; border-bottom-color: #D9E0E6; }
+.page-header h1 { font-size: clamp(2.5rem, 5vw, 4.5rem); letter-spacing: -.04em; }
+.cta { background: #243447; color: #fff; }
+.cta h2, .cta p { color: #fff; }
+.site-footer { background: #172333; }
+.site-footer a { color: #E8F0F7; }
+.site-footer a:hover { color: #83BCE4; }
 @media (max-width: 900px) {
-  .hero__media::before { inset: .6rem -.6rem -.6rem .6rem; }
-  .hero h1 { max-width: 12ch; font-size: clamp(2.7rem, 10vw, 4.5rem); }
+  .hero__media::before { display: none; }
+  .hero h1 { max-width: 13ch; font-size: clamp(2.6rem, 9vw, 4rem); }
 }
