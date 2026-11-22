@@ -33,8 +33,8 @@ module.exports = {
       src: "assets/img/km-projects-logo.svg", // Supplied KM Projects logo.
       srcOnDark: "",
       alt: "KM Projects",
-      width: 260,
-      height: 55,
+      width: 320,
+      height: 107,
       mark: "KM", // letter used for the "text" type and the generated favicon
     },
   },
@@ -83,10 +83,10 @@ module.exports = {
   /* CONTACT                                                             */
   /* ------------------------------------------------------------------ */
   contact: {
-    email: "",
-    phone: "",
-    phoneHref: "",
-    whatsapp: "",
+    email: "kmprojects13@gmail.com",
+    phone: "084 775 2399",
+    phoneHref: "+27847752399",
+    whatsapp: "0716850127",
     whatsappMessage: "Hello, I'd like to make an enquiry.",
     whatsappFloating: true, // floating chat button on every page except Contact
     address: {
@@ -129,7 +129,7 @@ module.exports = {
     legal: "All rights reserved.",
     extraLinks: [], // e.g. { label: "Privacy policy", href: "/privacy" } (page must exist)
     // Credit line at the very bottom of every page. Set enabled: false to hide it.
-    credit: { enabled: true, text: "Website by", name: "Flowline Studio", url: "https://flowlinestudio.co.za" },
+    credit: { enabled: false, text: "", name: "", url: "" },
   },
 
   /* ------------------------------------------------------------------ */
@@ -139,7 +139,7 @@ module.exports = {
     // "/api/contact" is the built-in Vercel function (api/contact.js) that emails enquiries through
     // Resend. It needs RESEND_API_KEY and CONTACT_TO set in Vercel (see README). You can also use
     // Formspree, Getform, Basin or your own API. Leave "" to show the honest "not connected" message.
-    endpoint: "",
+    endpoint: "/api/contact",
     enquiryTypes: ["Request a quote", "Home renovations", "Kitchen cabinets", "Built-in cabinets", "Driveway gates", "Burglar bars", "General enquiry"],
     quoteType: "Request a quote", // pre-selected when arriving from a quote button
     messages: {
@@ -168,7 +168,7 @@ module.exports = {
         price: null,
         cta: "Enquire about renovations",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85", alt: "Construction work on a residential renovation site", width: 1200, height: 900 },
+        image: { src: "https://www.ndinesipho.co.za/_next/image?q=75&url=%2Fimages%2Fservice-renovation.webp&w=3840", alt: "Builders renovating a room, with plastering and painting in progress", width: 1200, height: 900 },
       },
       {
         id: "kitchen-cabinets",
@@ -180,7 +180,7 @@ module.exports = {
         price: null,
         cta: "Enquire about kitchen cabinets",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", alt: "Fitted kitchen cabinets and work surfaces", width: 1200, height: 900 },
+        image: { src: "https://che-kuhni.ru/upload/iblock/3b8/3b87223497594b051ab8537bcc3c8e51.jpg", alt: "White and wood fitted kitchen cabinets with integrated appliances", width: 1200, height: 900 },
       },
       {
         id: "built-in-cabinets",
@@ -192,7 +192,7 @@ module.exports = {
         price: null,
         cta: "Enquire about built-in cabinets",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of built-in bedroom storage", width: 1200, height: 900 },
+        image: { src: "https://le-de.cdn-website.com/4c69b0541ac24a9a9104afc5f4e8e354/dms3rep/multi/opt/PXL_20240916_135302299-1920w.jpeg", alt: "Full-height fitted bedroom wardrobes and built-in cupboards", width: 1200, height: 900 },
       },
       {
         id: "driveway-gates",
@@ -204,7 +204,7 @@ module.exports = {
         price: null,
         cta: "Enquire about driveway gates",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=85", alt: "Residential driveway entrance with a metal gate", width: 1200, height: 900 },
+        image: { src: "https://i.ebayimg.com/images/g/tY0AAOSwX5hoURSn/s-l1200.jpg", alt: "Black steel sliding driveway gate across a residential entrance", width: 1200, height: 900 },
       },
       {
         id: "burglar-bars",
@@ -216,7 +216,7 @@ module.exports = {
         price: null,
         cta: "Enquire about burglar bars",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=85", alt: "Metal burglar bars fitted to residential windows", width: 1200, height: 900 },
+        image: { src: "https://www.automaticgates.co.za/skin/images/dropdownPics/burglar.jpg", alt: "Steel burglar bars fitted across residential windows", width: 1200, height: 900 },
       },
     ],
     pricing: {
@@ -247,7 +247,7 @@ module.exports = {
           primaryCta: { label: "Request a quote", page: "contact", query: "?enquiry=quote" },
           secondaryCta: { label: "Explore our services", page: "services" },
           highlights: ["Home renovations", "Kitchen & built-in cabinets", "Gates & burglar bars"],
-          image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=88", alt: "Home renovation and building work in progress", width: 1800, height: 1400 },
+          image: { src: "https://www.ndinesipho.co.za/_next/image?q=75&url=%2Fimages%2Fservice-renovation.webp&w=3840", alt: "Home renovation work in progress with builders preparing a room", width: 1800, height: 1400 },
         },
         {
           type: "intro",
@@ -258,7 +258,7 @@ module.exports = {
             "Tell KM Projects about your space and the work you have in mind. The details of your project can then be discussed before a quote is prepared.",
           ],
           link: { label: "Learn more about our services", page: "services" },
-          image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=88", alt: "Illustrative image of a fitted kitchen", width: 1400, height: 1050 },
+          image: { src: "https://che-kuhni.ru/upload/iblock/3b8/3b87223497594b051ab8537bcc3c8e51.jpg", alt: "Fitted kitchen cabinetry in white and natural wood", width: 1400, height: 1050 },
         },
         {
           type: "catalogue",
@@ -308,7 +308,7 @@ module.exports = {
             "Every home and property is different. The right solution depends on the space, the way it is used and the result you want to achieve.",
             "KM Projects works across home renovations, kitchen cabinets, built-in cabinets, driveway gates and burglar bars. Contact the team to discuss your requirements and confirm the details for your project.",
           ],
-          image: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88", alt: "Residential home improvement detail", width: 1400, height: 1050 },
+          image: { src: "https://www.ndinesipho.co.za/_next/image?q=75&url=%2Fimages%2Fservice-renovation.webp&w=3840", alt: "Residential renovation in progress", width: 1400, height: 1050 },
         },
         {
           type: "values",
