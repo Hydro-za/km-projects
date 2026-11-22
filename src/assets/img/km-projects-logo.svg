@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 250" role="img" aria-labelledby="title">
+<title id="title">KM Projects</title>
+<g fill="none" stroke="#08752b" stroke-width="17" stroke-linecap="square" stroke-linejoin="miter">
+<path d="M18 118 148 20 278 118"/>
+<path d="M61 101 148 43 235 101"/>
+<path d="M148 43v-25"/>
+</g>
+<g font-family="Arial, Helvetica, sans-serif" font-weight="800">
+<text x="55" y="204" font-size="142" fill="#242424" letter-spacing="-12">KM</text>
+<path d="M296 18v205" stroke="#08752b" stroke-width="4"/>
+<text x="330" y="164" font-size="100" fill="#08752b" letter-spacing="-4">PROJECTS</text>
+</g>
+</svg>
