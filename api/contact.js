@@ -104,7 +104,7 @@ module.exports = async function handler(req, res) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.CONTACT_FROM || "Website Enquiries <onboarding@resend.dev>",
+        from: process.env.CONTACT_FROM || "KM Projects Website <noreply@flowlinestudio.co.za>",
         to: RECIPIENTS,
         reply_to: email,
         subject: "New website message: " + name,
