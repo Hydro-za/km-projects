@@ -168,7 +168,7 @@ module.exports = {
         price: null,
         cta: "Enquire about renovations",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of a renovated home interior", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85", alt: "Construction work on a residential renovation site", width: 1200, height: 900 },
       },
       {
         id: "kitchen-cabinets",
@@ -180,7 +180,7 @@ module.exports = {
         price: null,
         cta: "Enquire about kitchen cabinets",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of kitchen cabinetry", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", alt: "Fitted kitchen cabinets and work surfaces", width: 1200, height: 900 },
       },
       {
         id: "built-in-cabinets",
@@ -204,7 +204,7 @@ module.exports = {
         price: null,
         cta: "Enquire about driveway gates",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of a residential property entrance", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1200&q=85", alt: "Residential driveway entrance with a metal gate", width: 1200, height: 900 },
       },
       {
         id: "burglar-bars",
@@ -216,7 +216,7 @@ module.exports = {
         price: null,
         cta: "Enquire about burglar bars",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1557647291-855d376fd264?auto=format&fit=crop&w=1200&q=85", alt: "Residential windows fitted with metal security burglar bars", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1200&q=85", alt: "Metal burglar bars fitted to residential windows", width: 1200, height: 900 },
       },
     ],
     pricing: {
@@ -247,7 +247,7 @@ module.exports = {
           primaryCta: { label: "Request a quote", page: "contact", query: "?enquiry=quote" },
           secondaryCta: { label: "Explore our services", page: "services" },
           highlights: ["Home renovations", "Kitchen & built-in cabinets", "Gates & burglar bars"],
-          image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=88", alt: "Renovated home interior", width: 1800, height: 1400 },
+          image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1800&q=88", alt: "Home renovation and building work in progress", width: 1800, height: 1400 },
         },
         {
           type: "intro",
@@ -258,7 +258,7 @@ module.exports = {
             "Tell KM Projects about your space and the work you have in mind. The details of your project can then be discussed before a quote is prepared.",
           ],
           link: { label: "Learn more about our services", page: "services" },
-          image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88", alt: "Illustrative image of a fitted kitchen", width: 1400, height: 1050 },
+          image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=88", alt: "Illustrative image of a fitted kitchen", width: 1400, height: 1050 },
         },
         {
           type: "catalogue",
