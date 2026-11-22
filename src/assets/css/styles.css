@@ -610,3 +610,11 @@ main { animation: page-in .5s var(--ease-out) both; }
 }
 /* Service imagery uses a consistent crop without stretching. */
 .detail__media img, .split__media img { display: block; width: 100%; height: 100%; min-height: 18rem; object-fit: cover; object-position: center; }
+
+
+/* ---------- Logo: one clean rule set (wide logo that already contains the business name) ---------- */
+.site-header .brand { flex: 0 1 auto; min-width: 0; max-width: calc(100% - 4rem); }
+.site-header .brand .brand__logo { display: block; height: 2.35rem; width: auto; max-width: 100%; max-height: none; object-fit: contain; }
+@media (min-width: 640px) { .site-header .brand .brand__logo { height: 2.9rem; } }
+@media (min-width: 1000px) { .site-header .brand .brand__logo { height: 3.2rem; } }
+.site-footer .brand .brand__logo { display: block; height: 2.9rem; width: auto; max-width: 100%; max-height: none; background: none; padding: 0; }

@@ -30,11 +30,11 @@ module.exports = {
     // srcOnDark: optional light version for the dark footer. Without it the logo sits on a white tile.
     logo: {
       type: "image",
-      src: "assets/img/km-projects-logo.svg", // Supplied KM Projects logo.
-      srcOnDark: "",
+      src: "assets/img/km-projects-logo.png", // KM Projects logo (cropped, transparent background).
+      srcOnDark: "assets/img/km-projects-logo-light.png", // light version for the dark footer
       alt: "KM Projects",
-      width: 320,
-      height: 107,
+      width: 240,
+      height: 50,
       mark: "KM", // letter used for the "text" type and the generated favicon
     },
   },
