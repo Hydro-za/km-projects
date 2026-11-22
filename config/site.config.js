@@ -195,7 +195,7 @@ module.exports = {
         price: null,
         cta: "Discuss a renovation",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1541976590-713941681591?auto=format&fit=crop&w=1200&q=85", alt: "Construction work taking place on a building site", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85", alt: "Construction work taking place on a building site", width: 1200, height: 900 },
       },
       {
         id: "project-coordination",
