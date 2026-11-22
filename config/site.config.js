@@ -216,7 +216,7 @@ module.exports = {
         price: null,
         cta: "Enquire about burglar bars",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of a residential home exterior", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1557647291-855d376fd264?auto=format&fit=crop&w=1200&q=85", alt: "Residential windows fitted with metal security burglar bars", width: 1200, height: 900 },
       },
     ],
     pricing: {
