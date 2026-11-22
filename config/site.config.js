@@ -14,17 +14,17 @@ module.exports = {
   /* BUSINESS                                                            */
   /* ------------------------------------------------------------------ */
   business: {
-    name: "AUREL CONSTRUCTION",
-    legalName: "Aurel Construction",
-    industry: "Construction & property development",
-    tagline: "Reliable building. Quality workmanship.",
-    shortDescription: "A professional construction company handling residential builds, commercial projects and renovations across Durban and KwaZulu-Natal.",
+    name: "KM PROJECTS",
+    legalName: "KM Projects",
+    industry: "Home renovations, cabinetry and security installations",
+    tagline: "Practical home improvements. Quality workmanship.",
+    shortDescription: "KM Projects provides home renovations, kitchen cabinets, built-in cabinets, driveway gates and burglar bars. Contact the team to discuss your project.",
     foundedYear: null, // e.g. 2012. Leave null to hide "since" mentions.
     // Schema.org type. Use the most specific one that fits, e.g. "HomeAndConstructionBusiness",
     // "Dentist", "Restaurant", "LegalService", "Store", "AutoRepair", "ProfessionalService".
     schemaType: "HomeAndConstructionBusiness",
     priceRange: null, // e.g. "$$". Leave null if unknown.
-    areaServed: ["Durban", "KwaZulu-Natal", "South Africa"],
+    areaServed: [], // PLACEHOLDER: add the actual towns/areas KM Projects serves.,
     // Logo slot. type:
     //   "image+name"  logo image on the LEFT with the business name beside it
     //   "image"       logo image only (for logos that already include the name)
@@ -32,13 +32,13 @@ module.exports = {
     // Replace src with your logo (SVG or PNG), then set width/height to its display size in px.
     // srcOnDark: optional light version for the dark footer. Without it the logo sits on a white tile.
     logo: {
-      type: "text",
-      src: "",
+      type: "image",
+      src: "assets/img/km-projects-logo.png", // PLACEHOLDER: add the supplied KM Projects logo file at this path.
       srcOnDark: "",
-      alt: "Aurel Construction",
-      width: 44,
-      height: 44,
-      mark: "A", // letter used for the "text" type and the generated favicon
+      alt: "KM Projects",
+      width: 220,
+      height: 74,
+      mark: "KM", // letter used for the "text" type and the generated favicon
     },
   },
 
@@ -61,14 +61,14 @@ module.exports = {
   /* ------------------------------------------------------------------ */
   theme: {
     colors: {
-      primary: "#243447",
-      primaryDark: "#172333",
+      primary: "#176B2C",
+      primaryDark: "#10451F",
       onPrimary: "#ffffff",
-      accent: "#2874A6",
-      ink: "#202B36",
-      muted: "#687582",
-      line: "#D9E0E6",
-      surface: "#F1F4F6",
+      accent: "#2D8A43",
+      ink: "#202820",
+      muted: "#68736A",
+      line: "#DCE6DD",
+      surface: "#F4F8F4",
       background: "#FFFFFF",
     },
     fonts: {
@@ -79,7 +79,7 @@ module.exports = {
       googleFontsUrl:
         "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap",
     },
-    radius: "2px", // refined, architectural edges
+    radius: "6px", // clean, practical finish
   },
 
   /* ------------------------------------------------------------------ */
@@ -115,7 +115,7 @@ module.exports = {
   /* NAVIGATION + FOOTER                                                 */
   /* ------------------------------------------------------------------ */
   // Slim contact strip above the header. enabled: false removes it.
-  topBar: { enabled: true, message: "BUILDING & CONSTRUCTION  /  DURBAN, SOUTH AFRICA", showHours: false, showEmail: false },
+  topBar: { enabled: true, message: "HOME RENOVATIONS  /  CABINETRY  /  SECURITY", showHours: false, showEmail: false },
 
   nav: {
     items: [
@@ -127,7 +127,7 @@ module.exports = {
     cta: { label: "Get a quote", page: "contact", query: "?enquiry=quote" },
   },
   footer: {
-    blurb: "Practical construction services for homes, businesses and property improvements.",
+    blurb: "Home renovations, custom cabinetry and security installations by KM Projects.",
     columns: ["explore", "contact", "hours"], // order of footer columns
     legal: "All rights reserved.",
     extraLinks: [], // e.g. { label: "Privacy policy", href: "/privacy" } (page must exist)
@@ -143,7 +143,7 @@ module.exports = {
     // Resend. It needs RESEND_API_KEY and CONTACT_TO set in Vercel (see README). You can also use
     // Formspree, Getform, Basin or your own API. Leave "" to show the honest "not connected" message.
     endpoint: "",
-    enquiryTypes: ["General enquiry", "Request a quote", "Existing customer", "Something else"],
+    enquiryTypes: ["Home renovations", "Kitchen cabinets", "Built-in cabinets", "Driveway gates", "Burglar bars", "General enquiry"],
     quoteType: "Request a quote", // pre-selected when arriving from a service button
     messages: {
       success: "Thank you. Your message has been sent and we'll reply as soon as we can.",
@@ -162,52 +162,64 @@ module.exports = {
     itemLabelPlural: "services",
     items: [
       {
-        id: "residential-construction",
-        icon: "house",
-        name: "Residential Construction",
-        summary: "New homes built with practical planning, solid workmanship and attention to detail.",
-        description: "From foundations and brickwork to roofing and finishes, residential builds are managed with a focus on sound construction and a clear scope of work.",
-        benefits: ["A clear project brief", "Practical planning and coordination", "Materials and finishes suited to the project scope"],
+        id: "home-renovations",
+        icon: "wrench",
+        name: "Home Renovations",
+        summary: "Refresh and improve your home with renovation work planned around your space and needs.",
+        description: "From updating existing rooms to improving the way your home works, discuss the renovation you have in mind and the work required.",
+        benefits: ["Work planned around your home", "Options discussed to suit your project", "A clear scope before work begins"],
         price: null,
-        cta: "Discuss a residential project",
+        cta: "Enquire about renovations",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85", alt: "Active building site with a building under construction", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", alt: "Bright renovated home interior", width: 1200, height: 900 },
       },
       {
-        id: "commercial-projects",
-        icon: "building-2",
-        name: "Commercial Projects",
-        summary: "Construction and building improvements for commercial properties and business premises.",
-        description: "Commercial projects are planned around the property's requirements, site conditions, construction work and practical handover needs.",
-        benefits: ["Practical planning for commercial properties", "Coordination around project requirements", "Durable, suitable finishes"],
+        id: "kitchen-cabinets",
+        icon: "layers",
+        name: "Kitchen Cabinets",
+        summary: "Kitchen cabinetry to help make your kitchen more organised and functional.",
+        description: "Discuss cabinet layouts, storage needs, finishes and the look you want for your kitchen. Add project photographs and material options here when available.",
+        benefits: ["Cabinet layout to suit the space", "Storage and finish options", "Designed around your kitchen requirements"],
         price: null,
-        cta: "Discuss a commercial project",
+        cta: "Enquire about kitchen cabinets",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85", alt: "Construction workers carrying out building work on site", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85", alt: "Modern kitchen cabinetry", width: 1200, height: 900 },
       },
       {
-        id: "renovations-extensions",
-        icon: "hammer",
-        name: "Renovations & Extensions",
-        summary: "Upgrade, repair or extend existing homes and buildings.",
-        description: "Renovation and extension work can include structural changes, new rooms, repairs and updated finishes, depending on the property and agreed scope.",
-        benefits: ["Respect for the existing property", "Clear scope and finish decisions", "Improvements focused on everyday use"],
+        id: "built-in-cabinets",
+        icon: "building",
+        name: "Built-in Cabinets",
+        summary: "Built-in storage solutions for bedrooms and other areas around the home.",
+        description: "Make better use of available space with built-in cabinets planned around your storage requirements and preferred finish.",
+        benefits: ["Storage tailored to the available space", "Choice of layout and finish", "Practical everyday organisation"],
         price: null,
-        cta: "Discuss a renovation",
+        cta: "Enquire about built-in cabinets",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85", alt: "Construction work taking place on a building site", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=85", alt: "Built-in bedroom wardrobe storage", width: 1200, height: 900 },
       },
       {
-        id: "project-coordination",
-        icon: "clipboard-check",
-        name: "Project Coordination",
-        summary: "Keep decisions, sequencing and communication connected.",
-        description: "Good coordination helps keep the wider project in view. Scope, key decisions, site activity and finishing requirements are considered as connected parts of the work.",
-        benefits: ["Straightforward communication points", "Practical sequencing of work", "Attention to the overall brief"],
+        id: "driveway-gates",
+        icon: "shield",
+        name: "Driveway Gates",
+        summary: "Driveway gate solutions to suit your property's entrance and access needs.",
+        description: "Discuss the style, opening requirements and dimensions for a driveway gate that suits your property. Add gate types, automation options and project photos here when confirmed.",
+        benefits: ["Options for different entrances", "Style and access requirements considered", "Project-specific measurements and details"],
         price: null,
-        cta: "Discuss project coordination",
-        featured: false,
-        image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85", alt: "Construction workers on an active building site", width: 1200, height: 900 },
+        cta: "Enquire about driveway gates",
+        featured: true,
+        image: { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85", alt: "Residential property entrance and gate", width: 1200, height: 900 },
+      },
+      {
+        id: "burglar-bars",
+        icon: "shield",
+        name: "Burglar Bars",
+        summary: "Security bars for windows and other suitable openings around your home.",
+        description: "Discuss the openings that need protection, preferred designs and measurements. Add confirmed design choices and installation details here when available.",
+        benefits: ["Options for different window openings", "Design discussed to suit the property", "Measurements confirmed for each project"],
+        price: null,
+        cta: "Enquire about burglar bars",
+        featured: true,
+        image: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85", alt: "Residential home exterior detail", width: 1200, height: 900 },
       },
     ],
     pricing: {
@@ -225,182 +237,150 @@ module.exports = {
     home: {
       slug: "",
       seo: {
-        title: "Aurel Construction | Building & Construction Durban",
-        description: "Aurel Construction provides residential building, commercial construction, renovations and extensions in Durban and KwaZulu-Natal.",
-        keywords: ["construction Durban", "residential construction", "commercial building", "renovations KwaZulu-Natal"],
+        title: "KM Projects | Home Renovations, Cabinets & Security",
+        description: "KM Projects offers home renovations, kitchen cabinets, built-in cabinets, driveway gates and burglar bars. Get in touch to discuss your project.",
+        keywords: ["home renovations", "kitchen cabinets", "built-in cabinets", "driveway gates", "burglar bars"],
       },
       sections: [
         {
           type: "hero",
-          eyebrow: "Construction · Development · Renovation",
-          headline: "Building work done properly.",
-          text: "From new homes and commercial buildings to renovations and extensions, we help turn building plans into completed projects.",
-          primaryCta: { label: "Discuss your project", page: "contact", query: "?enquiry=quote" },
-          secondaryCta: { label: "Explore our work", page: "services" },
-          highlights: ["Residential & commercial", "Renovations & extensions", "A clear project process"],
-          image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1800&q=88", alt: "Building structure under construction", width: 1800, height: 1400 },
+          eyebrow: "Home renovations · Cabinetry · Security",
+          headline: "Make more of your home.",
+          text: "From kitchen and built-in cabinets to home renovations, driveway gates and burglar bars, KM Projects helps you improve the spaces that matter.",
+          primaryCta: { label: "Request a quote", page: "contact", query: "?enquiry=quote" },
+          secondaryCta: { label: "Explore our services", page: "services" },
+          highlights: ["Home renovations", "Kitchen & built-in cabinets", "Gates & burglar bars"],
+          image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=88", alt: "Renovated home interior", width: 1800, height: 1400 },
         },
         {
           type: "intro",
-          eyebrow: "Construction you can rely on",
-          heading: "Every solid build starts with good preparation.",
+          eyebrow: "KM Projects",
+          heading: "Practical improvements, made for your home.",
           paragraphs: [
-            "Every project needs a clear scope, practical planning, organised site work and attention to the details that affect the finished result.",
-            "Aurel Construction focuses on straightforward building work, clear communication and keeping each project moving from start to finish.",
+            "Whether you are updating a kitchen, adding built-in storage or improving your property's security, start with a clear idea of what you need.",
+            "Tell KM Projects about your space and the work you have in mind. The details of your project can then be discussed before a quote is prepared.",
           ],
-          link: { label: "Discover our approach", page: "about" },
-          image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1400&q=88", alt: "Construction team working on site", width: 1400, height: 1050 },
+          link: { label: "Learn more about our services", page: "services" },
+          image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88", alt: "Kitchen with fitted cabinets", width: 1400, height: 1050 },
         },
         {
           type: "catalogue",
           eyebrow: "What we do",
-          heading: "Construction services for every stage.",
-          intro: "Building services for new residential and commercial projects, renovations and extensions.",
+          heading: "Our services",
+          intro: "Explore the home improvement, cabinetry and security services offered by KM Projects.",
           featuredOnly: true,
           link: { label: "View all services", page: "services" },
         },
         {
           type: "features",
-          eyebrow: "How we work",
-          heading: "A well-managed build makes the difference.",
+          eyebrow: "Getting started",
+          heading: "A straightforward way to plan your project.",
           items: [
-            { icon: "compass", title: "Proper preparation", text: "A clear understanding of the brief, priorities and practical requirements before work begins." },
-            { icon: "layers", title: "Organised site management", text: "A joined-up approach to the moving parts that bring a construction project together." },
-            { icon: "eye", title: "Quality workmanship", text: "Materials, construction methods and finishes are selected to suit the project requirements." },
-            { icon: "message-circle", title: "Straightforward communication", text: "Straightforward updates help keep decisions, expectations and next steps visible." },
+            { icon: "message-circle", title: "Tell us what you need", text: "Share the type of work, the area of your home and what you would like to change." },
+            { icon: "clipboard-check", title: "Discuss the details", text: "Go through measurements, design preferences, materials and practical requirements." },
+            { icon: "check", title: "Request your quote", text: "Use the agreed project details as the basis for a quotation." },
           ],
         },
         {
           type: "cta",
           heading: "Have a project in mind?",
-          text: "Start with a conversation. Tell us what you are planning and what matters most.",
-          primaryCta: { label: "Start an enquiry", page: "contact", query: "?enquiry=quote" },
-          secondaryCta: { label: "Explore services", page: "services" },
+          text: "Get in touch with KM Projects and tell us what you would like done.",
+          primaryCta: { label: "Request a quote", page: "contact", query: "?enquiry=quote" },
+          secondaryCta: { label: "View services", page: "services" },
         },
       ],
     },
-
     about: {
       slug: "about",
       seo: {
-        title: "About Aurel | Construction Company in Durban",
-        description: "Learn about Aurel Construction's approach to residential building, commercial projects, renovations and site coordination in Durban.",
-        keywords: ["about Aurel Construction", "construction approach", "building company Durban"],
+        title: "About KM Projects | Home Improvement Services",
+        description: "Find out more about KM Projects and its home renovation, cabinetry and property security services.",
+        keywords: ["about KM Projects", "home improvement", "cabinet installation"],
       },
       sections: [
         {
           type: "pageHeader",
-          eyebrow: "About Aurel",
-          heading: "A practical approach to construction.",
-          text: "A construction company focused on practical building solutions, reliable communication and quality work.",
+          eyebrow: "About KM Projects",
+          heading: "Improvements that work for your home.",
+          text: "KM Projects provides home renovation, cabinetry and property security services.",
         },
         {
           type: "story",
-          heading: "From groundwork to completion.",
+          heading: "A project starts with what you need.",
           paragraphs: [
-            "Aurel Construction is a construction company serving residential and commercial clients. This demo website presents typical building services, from early site preparation and structural work through to finishing and handover.",
-            "Each project is approached according to its scope, site conditions, materials and practical requirements.",
+            "Every home and property is different. The right solution depends on the space, the way it is used and the result you want to achieve.",
+            "KM Projects works across home renovations, kitchen cabinets, built-in cabinets, driveway gates and burglar bars. Contact the team to discuss your requirements and confirm the details for your project.",
           ],
-          image: { src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1400&q=88", alt: "Building construction in progress", width: 1400, height: 1050 },
-        },
-        {
-          type: "missionVision",
-          mission: { heading: "Our purpose", text: "To make construction projects easier to plan and manage through clear scopes, practical coordination and straightforward communication." },
-          vision: { heading: "Our perspective", text: "A construction industry where sound preparation, dependable workmanship and clear communication are standard." },
+          image: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88", alt: "Residential home improvement detail", width: 1400, height: 1050 },
         },
         {
           type: "values",
-          eyebrow: "What guides the work",
-          heading: "Principles behind every decision.",
+          eyebrow: "Our approach",
+          heading: "What matters when planning the work.",
           items: [
-            { title: "Clarity", text: "A shared understanding of the brief, scope and decisions ahead." },
-            { title: "Craft", text: "Care for the materials, junctions and finishes that shape the result." },
-            { title: "Preparation", text: "Understand the site, scope, materials and practical requirements before work begins." },
-            { title: "Accountability", text: "A practical, transparent approach to communication and coordination." },
-          ],
-        },
-        {
-          type: "differentiators",
-          eyebrow: "Our process",
-          heading: "A strong result starts long before the build.",
-          items: [
-            { title: "Understand the brief", text: "Start with the purpose of the space, the priorities and the constraints." },
-            { title: "Plan the details", text: "Work through materials, sequencing and practical requirements before they become site decisions." },
-            { title: "Keep the whole in view", text: "Balance function, finish and the wider intent throughout the project." },
+            { title: "Understand the space", text: "Consider the property's layout, measurements and how the finished work will be used." },
+            { title: "Choose suitable details", text: "Discuss materials, finishes and design choices that fit the project." },
+            { title: "Keep the scope clear", text: "Confirm the work required before moving ahead with a quotation." },
           ],
         },
         {
           type: "cta",
-          heading: "Let's talk about what you want to build.",
-          text: "Share the outline of your project and the outcome you have in mind.",
-          primaryCta: { label: "Contact Aurel", page: "contact" },
+          heading: "Let's discuss your project.",
+          text: "Get in touch with KM Projects to talk through the work you have in mind.",
+          primaryCta: { label: "Contact KM Projects", page: "contact" },
         },
       ],
     },
-
     services: {
       slug: "services",
       seo: {
-        title: "Construction Services | Aurel",
-        description: "Explore Aurel's residential construction, commercial projects, renovations and project coordination services in Durban and KwaZulu-Natal.",
-        keywords: ["construction services Durban", "home renovations", "commercial construction", "project coordination"],
+        title: "Services | KM Projects",
+        description: "Explore KM Projects services including home renovations, kitchen cabinets, built-in cabinets, driveway gates and burglar bars.",
+        keywords: ["home renovations", "kitchen cabinets", "built-in cabinets", "driveway gates", "burglar bars"],
       },
       sections: [
         {
           type: "pageHeader",
           eyebrow: "Our services",
-          heading: "Building services for your next project.",
-          text: "From a new build to a renovation or extension, each project begins with a clear scope and practical plan.",
+          heading: "Home improvements and practical solutions.",
+          text: "Explore the services offered by KM Projects and get in touch to discuss the details of your project.",
         },
         { type: "catalogueDetail" },
         {
-          type: "process",
-          eyebrow: "How we work",
-          heading: "A clear path from idea to completion.",
-          intro: "A clear process helps keep construction work organised and easier to manage.",
-          items: [
-            { title: "01 · Discover", text: "We begin by understanding your goals, site, priorities and the scope of work." },
-            { title: "02 · Define", text: "The brief is shaped into a practical direction, with key decisions and requirements identified." },
-            { title: "03 · Coordinate", text: "The work is organised around the agreed scope, sequence and communication points." },
-            { title: "04 · Complete", text: "The focus moves to the finishing details, final checks and a clear handover." },
-          ],
-        },
-        {
           type: "faq",
-          eyebrow: "Useful to know",
-          heading: "A few common questions.",
+          eyebrow: "Before you enquire",
+          heading: "A few helpful questions.",
           items: [
-            { q: "What types of projects do you take on?", a: "Aurel Construction's services cover residential building, commercial projects, renovations and extensions. The suitability of a project depends on its scope and requirements." },
-            { q: "Can I discuss an early-stage idea?", a: "Yes. An initial enquiry can outline the idea, location, approximate scope and what you would like to achieve." },
-            { q: "Do you work from existing plans?", a: "Project discussions can start with existing drawings, a written brief or an early concept. The next steps depend on the information available." },
-            { q: "How is a project quotation prepared?", a: "A useful quotation depends on a defined scope, specifications and site information. These details are reviewed before pricing is confirmed." },
+            { q: "How do I request a quote?", a: "Use the contact form to describe the work you need. Include measurements, photos or other details if you have them available." },
+            { q: "Can I enquire about more than one service?", a: "Yes. Select the closest enquiry type and explain all the work you would like to discuss in your message." },
+            { q: "Do I need measurements or photographs?", a: "They can help explain your project. If you do not have them yet, start with a short description of the space and the work required." },
           ],
         },
         {
           type: "cta",
-          heading: "Every project starts with a conversation.",
-          text: "Tell us about the property, the work required and what you would like to achieve.",
-          primaryCta: { label: "Request a consultation", page: "contact", query: "?enquiry=quote" },
+          heading: "Not sure where to start?",
+          text: "Send an enquiry and explain what you would like to improve.",
+          primaryCta: { label: "Get in touch", page: "contact", query: "?enquiry=quote" },
         },
       ],
     },
-
     contact: {
       slug: "contact",
       seo: {
-        title: "Contact Aurel | Discuss Your Project",
-        description: "Start a conversation with Aurel Construction about a residential, commercial or renovation project in Durban and KwaZulu-Natal.",
-        keywords: ["contact construction company Durban", "building quote", "renovation enquiry"],
+        title: "Contact KM Projects | Request a Quote",
+        description: "Contact KM Projects about home renovations, kitchen cabinets, built-in cabinets, driveway gates or burglar bars.",
+        keywords: ["contact KM Projects", "home renovation quote", "cabinet quote"],
       },
       sections: [
         {
           type: "pageHeader",
-          eyebrow: "Start a conversation",
+          eyebrow: "Contact KM Projects",
           heading: "Tell us what you have in mind.",
-          text: "Share a few details about your project. The more context you provide, the easier it is to understand the next step.",
+          text: "Send through a few details about your project and the team can follow up using the contact information you provide.",
         },
         { type: "contactMain" },
       ],
     },
   },
+
 };
