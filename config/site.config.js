@@ -1,13 +1,10 @@
 /**
- * SITE CONFIGURATION: the single source of truth.
+ * KM PROJECTS WEBSITE CONFIGURATION
  *
- * TEMPLATE VERSION. Every value below is neutral placeholder content.
- * To build a real site: replace the placeholders (or paste this file into ChatGPT/Claude
- * together with CUSTOMISE-PROMPT.md), add real images to src/assets/img, then run `node build.js`.
- * The build prints a launch checklist of anything still unfinished.
- *
- * While `site.indexable` is false the build adds noindex and blocks crawlers,
- * so unfinished content can never be indexed by accident.
+ * Confirmed brand and service details are configured below. Empty contact fields,
+ * service-area details and illustrative images are intentional placeholders until
+ * KM Projects supplies the real information. Keep indexing disabled until launch details
+ * and the contact form have been confirmed and tested.
  */
 module.exports = {
   /* ------------------------------------------------------------------ */
@@ -33,7 +30,7 @@ module.exports = {
     // srcOnDark: optional light version for the dark footer. Without it the logo sits on a white tile.
     logo: {
       type: "image",
-      src: "assets/img/km-projects-logo.svg", // PLACEHOLDER: add the supplied KM Projects logo file at this path.
+      src: "assets/img/km-projects-logo.svg", // Supplied KM Projects logo.
       srcOnDark: "",
       alt: "KM Projects",
       width: 220,
@@ -46,7 +43,7 @@ module.exports = {
   /* SITE / TECHNICAL                                                    */
   /* ------------------------------------------------------------------ */
   site: {
-    url: "https://test-sites-flowlinestudio10.vercel.app", // production origin, no trailing slash
+    url: "https://test-sites-flowlinestudio10.vercel.app", // Temporary hosting URL; replace with KM Projects' confirmed domain before launch.
     language: "en",
     locale: "en_ZA",
     // Keep false until real content is in place. true = indexable by search engines.
@@ -143,8 +140,8 @@ module.exports = {
     // Resend. It needs RESEND_API_KEY and CONTACT_TO set in Vercel (see README). You can also use
     // Formspree, Getform, Basin or your own API. Leave "" to show the honest "not connected" message.
     endpoint: "",
-    enquiryTypes: ["Home renovations", "Kitchen cabinets", "Built-in cabinets", "Driveway gates", "Burglar bars", "General enquiry"],
-    quoteType: "Request a quote", // pre-selected when arriving from a service button
+    enquiryTypes: ["Request a quote", "Home renovations", "Kitchen cabinets", "Built-in cabinets", "Driveway gates", "Burglar bars", "General enquiry"],
+    quoteType: "Request a quote", // pre-selected when arriving from a quote button
     messages: {
       success: "Thank you. Your message has been sent and we'll reply as soon as we can.",
       error: "Sorry, something went wrong and your message was not sent. Please try again, or contact us by phone or email.",
@@ -171,7 +168,7 @@ module.exports = {
         price: null,
         cta: "Enquire about renovations",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", alt: "Bright renovated home interior", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of a renovated home interior", width: 1200, height: 900 },
       },
       {
         id: "kitchen-cabinets",
@@ -183,7 +180,7 @@ module.exports = {
         price: null,
         cta: "Enquire about kitchen cabinets",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85", alt: "Modern kitchen cabinetry", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of kitchen cabinetry", width: 1200, height: 900 },
       },
       {
         id: "built-in-cabinets",
@@ -195,7 +192,7 @@ module.exports = {
         price: null,
         cta: "Enquire about built-in cabinets",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=85", alt: "Built-in bedroom wardrobe storage", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of built-in bedroom storage", width: 1200, height: 900 },
       },
       {
         id: "driveway-gates",
@@ -207,7 +204,7 @@ module.exports = {
         price: null,
         cta: "Enquire about driveway gates",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85", alt: "Residential property entrance and gate", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of a residential property entrance", width: 1200, height: 900 },
       },
       {
         id: "burglar-bars",
@@ -219,7 +216,7 @@ module.exports = {
         price: null,
         cta: "Enquire about burglar bars",
         featured: true,
-        image: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85", alt: "Residential home exterior detail", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85", alt: "Illustrative image of a residential home exterior", width: 1200, height: 900 },
       },
     ],
     pricing: {
@@ -261,7 +258,7 @@ module.exports = {
             "Tell KM Projects about your space and the work you have in mind. The details of your project can then be discussed before a quote is prepared.",
           ],
           link: { label: "Learn more about our services", page: "services" },
-          image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88", alt: "Kitchen with fitted cabinets", width: 1400, height: 1050 },
+          image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88", alt: "Illustrative image of a fitted kitchen", width: 1400, height: 1050 },
         },
         {
           type: "catalogue",
