@@ -14,17 +14,17 @@ module.exports = {
   /* BUSINESS                                                            */
   /* ------------------------------------------------------------------ */
   business: {
-    name: "Your Business Name",
-    legalName: "Your Business Name (Pty) Ltd",
-    industry: "Your industry",
-    tagline: "Your tagline goes here.",
-    shortDescription: "A short description of what your business does and who it helps.",
+    name: "AUREL CONSTRUCTION",
+    legalName: "Aurel Construction",
+    industry: "Construction & property development",
+    tagline: "Considered construction. Enduring spaces.",
+    shortDescription: "A design-led construction studio shaping refined residential, commercial and renovation spaces.",
     foundedYear: null, // e.g. 2012. Leave null to hide "since" mentions.
     // Schema.org type. Use the most specific one that fits, e.g. "HomeAndConstructionBusiness",
     // "Dentist", "Restaurant", "LegalService", "Store", "AutoRepair", "ProfessionalService".
-    schemaType: "LocalBusiness",
+    schemaType: "HomeAndConstructionBusiness",
     priceRange: null, // e.g. "$$". Leave null if unknown.
-    areaServed: [], // e.g. ["Cape Town", "Stellenbosch"]. Used in structured data.
+    areaServed: ["Durban", "KwaZulu-Natal", "South Africa"],
     // Logo slot. type:
     //   "image+name"  logo image on the LEFT with the business name beside it
     //   "image"       logo image only (for logos that already include the name)
@@ -32,13 +32,13 @@ module.exports = {
     // Replace src with your logo (SVG or PNG), then set width/height to its display size in px.
     // srcOnDark: optional light version for the dark footer. Without it the logo sits on a white tile.
     logo: {
-      type: "image+name",
-      src: "assets/img/logo-placeholder.svg",
+      type: "text",
+      src: "",
       srcOnDark: "",
-      alt: "Your Business Name logo",
+      alt: "Aurel Construction",
       width: 44,
       height: 44,
-      mark: "Y", // letter used for the "text" type and the generated favicon
+      mark: "A", // letter used for the "text" type and the generated favicon
     },
   },
 
@@ -46,7 +46,7 @@ module.exports = {
   /* SITE / TECHNICAL                                                    */
   /* ------------------------------------------------------------------ */
   site: {
-    url: "https://www.example.com", // production origin, no trailing slash
+    url: "https://test-sites-flowlinestudio10.vercel.app", // production origin, no trailing slash
     language: "en",
     locale: "en_ZA",
     // Keep false until real content is in place. true = indexable by search engines.
@@ -61,15 +61,15 @@ module.exports = {
   /* ------------------------------------------------------------------ */
   theme: {
     colors: {
-      primary: "#0f766e", // main brand colour (buttons, links, accents)
-      primaryDark: "#115e59", // hover state
-      onPrimary: "#ffffff", // text colour on primary
-      accent: "#b45309", // secondary highlight (used sparingly)
-      ink: "#111827", // body text and dark sections
-      muted: "#4b5563", // secondary text
-      line: "#e5e7eb", // hairline borders
-      surface: "#f3f5f7", // alternate section background
-      background: "#ffffff", // page background
+      primary: "#292A26",
+      primaryDark: "#171815",
+      onPrimary: "#ffffff",
+      accent: "#B18A58",
+      ink: "#252621",
+      muted: "#77766F",
+      line: "#DEDAD1",
+      surface: "#F1EFE9",
+      background: "#FAF9F6
     },
     fonts: {
       // Modern sans-serif pairing with system-font fallbacks.
@@ -79,36 +79,32 @@ module.exports = {
       googleFontsUrl:
         "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap",
     },
-    radius: "8px", // corner radius: "0" for sharp, "12px" for softer
+    radius: "2px", // refined, architectural edges
   },
 
   /* ------------------------------------------------------------------ */
   /* CONTACT                                                             */
   /* ------------------------------------------------------------------ */
   contact: {
-    email: "hello@example.com", // PLACEHOLDER
-    phone: "+00 000 000 0000", // PLACEHOLDER (display format)
-    phoneHref: "+000000000000", // digits for tel: links
-    whatsapp: "000000000000", // PLACEHOLDER: international format, no + or spaces. "" hides the buttons
+    email: "",
+    phone: "",
+    phoneHref: "",
+    whatsapp: "",
     whatsappMessage: "Hello, I'd like to make an enquiry.",
     whatsappFloating: true, // floating chat button on every page except Contact
     address: {
-      street: "123 Street Name", // PLACEHOLDER
-      locality: "Your City",
-      region: "Your Province",
-      postalCode: "0000",
+      street: "",
+      locality: "",
+      region: "KwaZulu-Natal",
+      postalCode: "",
       country: "ZA",
-      countryName: "Your Country",
+      countryName: "South Africa",
     },
     // Google Maps: paste the "Embed a map" src URL. "" hides the map.
     mapEmbedUrl: "",
     mapLink: "", // link to open the location in Google Maps
     // days: schema.org day names. closed: true shows "Closed". Example hours: replace with your own.
-    hours: [
-      { label: "Monday – Friday", days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "17:00" },
-      { label: "Saturday", days: ["Saturday"], opens: "09:00", closes: "13:00" },
-      { label: "Sunday and public holidays", days: [], closed: true },
-    ],
+    hours: [],
     social: [
       // { name: "Facebook", url: "https://facebook.com/yourpage" }
       // Supported icons: Facebook, Instagram, LinkedIn, X, YouTube, TikTok
@@ -119,7 +115,7 @@ module.exports = {
   /* NAVIGATION + FOOTER                                                 */
   /* ------------------------------------------------------------------ */
   // Slim contact strip above the header. enabled: false removes it.
-  topBar: { enabled: true, message: "", showHours: true, showEmail: true },
+  topBar: { enabled: true, message: "DESIGN-LED CONSTRUCTION  /  DURBAN, SOUTH AFRICA", showHours: false, showEmail: false },
 
   nav: {
     items: [
@@ -131,7 +127,7 @@ module.exports = {
     cta: { label: "Get a quote", page: "contact", query: "?enquiry=quote" },
   },
   footer: {
-    blurb: "A short line about your business that appears in the footer of every page.",
+    blurb: "Considered construction for spaces designed to be lived in, worked in and remembered.",
     columns: ["explore", "contact", "hours"], // order of footer columns
     legal: "All rights reserved.",
     extraLinks: [], // e.g. { label: "Privacy policy", href: "/privacy" } (page must exist)
@@ -146,7 +142,7 @@ module.exports = {
     // "/api/contact" is the built-in Vercel function (api/contact.js) that emails enquiries through
     // Resend. It needs RESEND_API_KEY and CONTACT_TO set in Vercel (see README). You can also use
     // Formspree, Getform, Basin or your own API. Leave "" to show the honest "not connected" message.
-    endpoint: "/api/contact",
+    endpoint: "",
     enquiryTypes: ["General enquiry", "Request a quote", "Existing customer", "Something else"],
     quoteType: "Request a quote", // pre-selected when arriving from a service button
     messages: {
@@ -162,155 +158,126 @@ module.exports = {
   /* For products: set itemLabel to "product", fill `price` on each item.*/
   /* ------------------------------------------------------------------ */
   catalogue: {
-    itemLabel: "service", // "service" | "product" | "treatment" ...
+    itemLabel: "service",
     itemLabelPlural: "services",
     items: [
       {
-        id: "service-one",
-        icon: "layers",
-        name: "Service One",
-        summary: "One sentence describing this service and who it is for.",
-        description:
-          "Describe this service in two or three sentences: what the customer gets, how it works and why it matters to them.",
-        benefits: ["Benefit one", "Benefit two", "Benefit three"],
-        price: null, // e.g. { from: "$100", unit: "per visit", note: "excl. materials" }
-        cta: "Enquire about this service",
+        id: "residential-construction",
+        icon: "house",
+        name: "Residential Construction",
+        summary: "Thoughtful new-build homes shaped around the people who live in them.",
+        description: "From early planning through to the finishing details, residential projects are approached with a focus on function, proportion, materials and the way each space will be used.",
+        benefits: ["A clear project brief", "Practical planning and coordination", "Considered material and finish choices"],
+        price: null,
+        cta: "Discuss a residential project",
         featured: true,
-        image: { src: "assets/img/placeholder-service-1.svg", alt: "Placeholder image for Service One", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85", alt: "Contemporary residential architecture", width: 1200, height: 900 },
       },
       {
-        id: "service-two",
-        icon: "wrench",
-        name: "Service Two",
-        summary: "One sentence describing this service and who it is for.",
-        description:
-          "Describe this service in two or three sentences: what the customer gets, how it works and why it matters to them.",
-        benefits: ["Benefit one", "Benefit two", "Benefit three"],
+        id: "commercial-projects",
+        icon: "building-2",
+        name: "Commercial Projects",
+        summary: "Purposeful spaces for businesses, teams and customers.",
+        description: "Commercial environments need to balance practical requirements with a coherent experience. The brief, layout, materials and delivery sequence all contribute to the finished space.",
+        benefits: ["Function-led space planning", "Coordination around project requirements", "Durable, considered finishes"],
         price: null,
-        cta: "Enquire about this service",
+        cta: "Discuss a commercial project",
         featured: true,
-        image: { src: "assets/img/placeholder-service-2.svg", alt: "Placeholder image for Service Two", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&q=85", alt: "Contemporary commercial workspace", width: 1200, height: 900 },
       },
       {
-        id: "service-three",
-        icon: "building",
-        name: "Service Three",
-        summary: "One sentence describing this service and who it is for.",
-        description:
-          "Describe this service in two or three sentences: what the customer gets, how it works and why it matters to them.",
-        benefits: ["Benefit one", "Benefit two", "Benefit three"],
+        id: "renovations-extensions",
+        icon: "hammer",
+        name: "Renovations & Extensions",
+        summary: "Rework existing spaces to better suit changing needs.",
+        description: "A renovation is an opportunity to improve how a property works without losing sight of its character. Each scope is considered in relation to the existing structure, priorities and practical constraints.",
+        benefits: ["Respect for the existing property", "Clear scope and finish decisions", "Improvements focused on everyday use"],
         price: null,
-        cta: "Enquire about this service",
+        cta: "Discuss a renovation",
         featured: true,
-        image: { src: "assets/img/placeholder-service-3.svg", alt: "Placeholder image for Service Three", width: 1200, height: 900 },
+        image: { src: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85", alt: "Refined renovated living space", width: 1200, height: 900 },
       },
       {
-        id: "service-four",
-        icon: "bolt",
-        name: "Service Four",
-        summary: "One sentence describing this service and who it is for.",
-        description:
-          "Describe this service in two or three sentences: what the customer gets, how it works and why it matters to them.",
-        benefits: ["Benefit one", "Benefit two", "Benefit three"],
+        id: "project-coordination",
+        icon: "clipboard-check",
+        name: "Project Coordination",
+        summary: "Keep decisions, sequencing and communication connected.",
+        description: "Good coordination helps keep the wider project in view. Scope, key decisions, site activity and finishing requirements are considered as connected parts of the work.",
+        benefits: ["Clear communication points", "Practical sequencing of work", "Attention to the overall brief"],
         price: null,
-        cta: "Enquire about this service",
-        featured: false, // featured items also appear on the Home page
-        image: { src: "assets/img/placeholder-service-4.svg", alt: "Placeholder image for Service Four", width: 1200, height: 900 },
+        cta: "Discuss project coordination",
+        featured: false,
+        image: { src: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85", alt: "Construction team reviewing work on site", width: 1200, height: 900 },
       },
     ],
-    // Optional pricing table (Services page, section type "pricing"). Set tiers: [] to hide it.
-    // The prices below are placeholders: replace them or remove the tiers.
     pricing: {
-      heading: "Pricing heading",
-      intro: "A short sentence explaining how your pricing works.",
-      tiers: [
-        { name: "Package One", price: "$00", unit: "per project", features: ["Feature one", "Feature two", "Feature three"], cta: "Choose this package", highlight: false },
-        { name: "Package Two", price: "$00", unit: "per project", features: ["Feature one", "Feature two", "Feature three"], cta: "Choose this package", highlight: true },
-        { name: "Package Three", price: "$00", unit: "per project", features: ["Feature one", "Feature two", "Feature three"], cta: "Choose this package", highlight: false },
-      ],
+      heading: "A scope-led approach to pricing",
+      intro: "Every project is different. Pricing is prepared once the scope, specifications and relevant site details are understood.",
+      tiers: [],
     },
   },
 
   /* ------------------------------------------------------------------ */
   /* PAGES: SEO + ordered sections                                       */
   /* Reorder, remove or duplicate sections freely. Each is {type,...}.   */
+  /* ------------------------------------------------------------------ */                                       */
+  /* Reorder, remove or duplicate sections freely. Each is {type,...}.   */
   /* ------------------------------------------------------------------ */
   pages: {
     home: {
-      slug: "", // "" = site root
+      slug: "",
       seo: {
-        title: "Your main service and location",
-        description:
-          "Write a 120 to 160 character summary of your business for search results. Mention your main service and where you work.",
-        keywords: ["your main keyword", "your service and city"],
+        title: "Aurel Construction | Refined Building & Design",
+        description: "Aurel Construction brings a considered approach to residential builds, commercial spaces and renovations across Durban and KwaZulu-Natal.",
+        keywords: ["construction Durban", "residential construction", "commercial building", "renovations KwaZulu-Natal"],
       },
       sections: [
         {
           type: "hero",
-          eyebrow: "Your industry or location",
-          headline: "Your main headline goes here.",
-          text: "A short paragraph under the headline that explains what your business does and who it helps.",
-          primaryCta: { label: "Get a quote", page: "contact", query: "?enquiry=quote" },
-          secondaryCta: { label: "View services", page: "services" },
-          highlights: ["Key benefit one", "Key benefit two", "Key benefit three"],
-          image: { src: "assets/img/placeholder-hero.svg", alt: "Placeholder for your main hero image", width: 1200, height: 960 },
+          eyebrow: "Construction · Development · Renovation",
+          headline: "Built with intention. Made to endure.",
+          text: "A considered approach to residential and commercial construction, where thoughtful planning meets lasting craftsmanship.",
+          primaryCta: { label: "Discuss your project", page: "contact", query: "?enquiry=quote" },
+          secondaryCta: { label: "Explore our work", page: "services" },
+          highlights: ["Residential & commercial", "Renovations & extensions", "A considered project process"],
+          image: { src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=88", alt: "Contemporary residence with refined architectural detailing", width: 1800, height: 1400 },
         },
         {
           type: "intro",
-          eyebrow: "Who we are",
-          heading: "A short introduction to your business.",
+          eyebrow: "A more considered way to build",
+          heading: "Good spaces begin with good decisions.",
           paragraphs: [
-            "Use this space for two short paragraphs introducing your business: who you are, what you do and who you do it for.",
-            "Add a second paragraph with a specific detail that sets you apart, such as your approach, experience or promise to customers.",
+            "From the first conversation to the final finish, every project deserves clear thinking, careful coordination and attention to the details that shape how a space feels.",
+            "Aurel brings construction, practical planning and a design-conscious perspective together to help turn considered ideas into places with purpose.",
           ],
-          link: { label: "More about us", page: "about" },
-          image: { src: "assets/img/placeholder-intro.svg", alt: "Placeholder for an introduction image", width: 1200, height: 900 },
+          link: { label: "Discover our approach", page: "about" },
+          image: { src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1400&q=88", alt: "Warm, minimal interior with natural materials", width: 1400, height: 1050 },
         },
         {
           type: "catalogue",
-          eyebrow: "What we offer",
-          heading: "Our services",
-          intro: "A short sentence introducing your services.",
+          eyebrow: "What we do",
+          heading: "Spaces shaped around the brief.",
+          intro: "A focused range of construction services for new spaces, evolving properties and more considered ways of working.",
           featuredOnly: true,
-          link: { label: "See all services", page: "services" },
+          link: { label: "View all services", page: "services" },
         },
         {
           type: "features",
-          eyebrow: "Why choose us",
-          heading: "Why customers choose us",
+          eyebrow: "The Aurel approach",
+          heading: "The details make the difference.",
           items: [
-            { icon: "check", title: "Reason one", text: "Explain this reason in one or two short sentences." },
-            { icon: "user", title: "Reason two", text: "Explain this reason in one or two short sentences." },
-            { icon: "clock", title: "Reason three", text: "Explain this reason in one or two short sentences." },
-            { icon: "shield", title: "Reason four", text: "Explain this reason in one or two short sentences." },
-          ],
-        },
-        {
-          type: "stats",
-          // Placeholders: replace with real, verifiable figures or remove this section.
-          items: [
-            { value: "00", label: "Statistic one (replace)" },
-            { value: "00", label: "Statistic two (replace)" },
-            { value: "00%", label: "Statistic three (replace)" },
-          ],
-          sample: true,
-        },
-        {
-          type: "testimonials",
-          eyebrow: "Client feedback",
-          heading: "What customers say",
-          sample: true, // set false once these are real testimonials (with permission)
-          items: [
-            { quote: "Replace this with a genuine customer testimonial, used with their permission.", name: "Customer name", role: "Role or location" },
-            { quote: "Add a second genuine testimonial here, or delete this entry.", name: "Customer name", role: "Role or location" },
+            { icon: "compass", title: "Thoughtful planning", text: "A clear understanding of the brief, priorities and practical requirements before work begins." },
+            { icon: "layers", title: "Careful coordination", text: "A joined-up approach to the moving parts that bring a construction project together." },
+            { icon: "eye", title: "Attention to detail", text: "Material choices, proportions and finishes are considered as part of the whole." },
+            { icon: "message-circle", title: "Clear communication", text: "Straightforward updates help keep decisions, expectations and next steps visible." },
           ],
         },
         {
           type: "cta",
-          heading: "A closing call to action.",
-          text: "One sentence inviting visitors to get in touch.",
-          primaryCta: { label: "Get a quote", page: "contact", query: "?enquiry=quote" },
-          secondaryCta: { label: "Call us", phone: true },
+          heading: "Have a project in mind?",
+          text: "Start with a conversation. Tell us what you are planning and what matters most.",
+          primaryCta: { label: "Start an enquiry", page: "contact", query: "?enquiry=quote" },
+          secondaryCta: { label: "Explore services", page: "services" },
         },
       ],
     },
@@ -318,67 +285,57 @@ module.exports = {
     about: {
       slug: "about",
       seo: {
-        title: "About us",
-        description:
-          "Write a 120 to 160 character summary of your About page: who you are, your story and what makes your business different.",
-        keywords: ["about your business"],
+        title: "About Aurel | A Considered Approach",
+        description: "Discover Aurel Construction's considered approach to planning, coordination and craftsmanship across residential and commercial projects.",
+        keywords: ["about Aurel Construction", "construction approach", "building company Durban"],
       },
       sections: [
         {
           type: "pageHeader",
-          eyebrow: "About us",
-          heading: "A headline about your business.",
-          text: "A short sentence about who you are and how you work.",
+          eyebrow: "About Aurel",
+          heading: "Built around a better way of working.",
+          text: "A design-conscious construction concept grounded in practical thinking, clear communication and respect for the brief.",
         },
         {
           type: "story",
-          heading: "Our story",
+          heading: "A clear vision, carefully carried through.",
           paragraphs: [
-            "Tell the story of your business: who started it, why, and how it has grown. Specific, true detail is more persuasive than general claims.",
-            "Add a second paragraph about your approach or what you stand for.",
+            "Aurel is presented as a modern construction studio for clients who value a thoughtful process as much as the finished space. The focus is on understanding the brief, resolving the details and keeping the work aligned with the original intent.",
+            "Rather than treating design and construction as separate conversations, the Aurel approach brings them together around the needs of each project.",
           ],
-          image: { src: "assets/img/placeholder-story.svg", alt: "Placeholder for a story image", width: 1200, height: 900 },
+          image: { src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=88", alt: "Modern home with clean architectural lines and landscaped setting", width: 1400, height: 1050 },
         },
         {
           type: "missionVision",
-          mission: { heading: "Our mission", text: "One or two sentences describing what your business is here to do." },
-          vision: { heading: "Our vision", text: "One or two sentences describing where your business is heading." },
+          mission: { heading: "Our purpose", text: "To make the building process more considered, understandable and connected to the needs of the people who use each space." },
+          vision: { heading: "Our perspective", text: "A built environment where thoughtful design, practical construction and enduring materials work together." },
         },
         {
           type: "values",
-          eyebrow: "Values",
-          heading: "What we stand for",
+          eyebrow: "What guides the work",
+          heading: "Principles behind every decision.",
           items: [
-            { title: "Value one", text: "Describe this value in one short sentence." },
-            { title: "Value two", text: "Describe this value in one short sentence." },
-            { title: "Value three", text: "Describe this value in one short sentence." },
-            { title: "Value four", text: "Describe this value in one short sentence." },
+            { title: "Clarity", text: "A shared understanding of the brief, scope and decisions ahead." },
+            { title: "Craft", text: "Care for the materials, junctions and finishes that shape the result." },
+            { title: "Consideration", text: "Respect for the site, the people involved and the way a space will be used." },
+            { title: "Accountability", text: "A practical, transparent approach to communication and coordination." },
           ],
         },
         {
           type: "differentiators",
-          eyebrow: "What sets us apart",
-          heading: "Different where it matters",
+          eyebrow: "A considered process",
+          heading: "A strong result starts long before the build.",
           items: [
-            { title: "Difference one", text: "Explain what makes your business different in one or two sentences." },
-            { title: "Difference two", text: "Explain what makes your business different in one or two sentences." },
-            { title: "Difference three", text: "Explain what makes your business different in one or two sentences." },
+            { title: "Understand the brief", text: "Start with the purpose of the space, the priorities and the constraints." },
+            { title: "Plan the details", text: "Work through materials, sequencing and practical requirements before they become site decisions." },
+            { title: "Keep the whole in view", text: "Balance function, finish and the wider intent throughout the project." },
           ],
         },
         {
-          type: "team",
-          optional: true,
-          eyebrow: "Our team",
-          heading: "The people behind the business",
-          // Add real people. With members: [] this section is hidden automatically.
-          members: [],
-          // { name: "Full name", role: "Role", bio: "One or two sentences.", image: { src: "assets/img/team-1.jpg", alt: "Full name" } }
-        },
-        {
           type: "cta",
-          heading: "Let's talk about your project.",
-          text: "One sentence inviting visitors to get in touch.",
-          primaryCta: { label: "Contact us", page: "contact" },
+          heading: "Let's talk about what you want to build.",
+          text: "Share the outline of your project and the outcome you have in mind.",
+          primaryCta: { label: "Contact Aurel", page: "contact" },
         },
       ],
     },
@@ -386,50 +343,46 @@ module.exports = {
     services: {
       slug: "services",
       seo: {
-        title: "Services",
-        description:
-          "Write a 120 to 160 character summary of your Services page that names your main services and your location.",
-        keywords: ["your services"],
+        title: "Construction Services | Aurel",
+        description: "Explore Aurel's residential construction, commercial projects, renovations and project coordination services in Durban and KwaZulu-Natal.",
+        keywords: ["construction services Durban", "home renovations", "commercial construction", "project coordination"],
       },
       sections: [
         {
           type: "pageHeader",
-          eyebrow: "Services",
-          heading: "What we can do for you.",
-          text: "A short sentence introducing your services and how customers can get started.",
+          eyebrow: "Our services",
+          heading: "The right team for the next stage of your space.",
+          text: "From a new build to a considered renovation, each project begins with a clear brief and a practical plan.",
         },
         { type: "catalogueDetail" },
         {
           type: "process",
-          eyebrow: "How it works",
-          heading: "From first contact to finished work",
-          intro: "A short sentence explaining your process.",
+          eyebrow: "How we work",
+          heading: "A clear path from idea to completion.",
+          intro: "A considered process helps make complex projects easier to understand and manage.",
           items: [
-            { title: "Step one", text: "Describe the first step of working with you." },
-            { title: "Step two", text: "Describe the second step of working with you." },
-            { title: "Step three", text: "Describe the third step of working with you." },
-            { title: "Step four", text: "Describe the final step of working with you." },
+            { title: "01 · Discover", text: "We begin by understanding your goals, site, priorities and the scope of work." },
+            { title: "02 · Define", text: "The brief is shaped into a practical direction, with key decisions and requirements identified." },
+            { title: "03 · Coordinate", text: "The work is organised around the agreed scope, sequence and communication points." },
+            { title: "04 · Complete", text: "The focus moves to the finishing details, final checks and a clear handover." },
           ],
         },
-        { type: "pricing" },
         {
           type: "faq",
-          eyebrow: "Questions",
-          heading: "Common questions",
-          sample: true, // replace with real answers, then set false
+          eyebrow: "Useful to know",
+          heading: "A few common questions.",
           items: [
-            { q: "Question one goes here?", a: "Write a clear, honest answer to this question in one or two sentences." },
-            { q: "Question two goes here?", a: "Write a clear, honest answer to this question in one or two sentences." },
-            { q: "Question three goes here?", a: "Write a clear, honest answer to this question in one or two sentences." },
-            { q: "Question four goes here?", a: "Write a clear, honest answer to this question in one or two sentences." },
-            { q: "Question five goes here?", a: "Write a clear, honest answer to this question in one or two sentences." },
+            { q: "What types of projects do you take on?", a: "The Aurel concept covers residential construction, commercial spaces, renovations and extensions. The suitability of a project depends on its scope and requirements." },
+            { q: "Can I discuss an early-stage idea?", a: "Yes. An initial enquiry can outline the idea, location, approximate scope and what you would like to achieve." },
+            { q: "Do you work from existing plans?", a: "Project discussions can start with existing drawings, a written brief or an early concept. The next steps depend on the information available." },
+            { q: "How is a project quotation prepared?", a: "A useful quotation depends on a defined scope, specifications and site information. These details are reviewed before pricing is confirmed." },
           ],
         },
         {
           type: "cta",
-          heading: "Not sure what you need?",
-          text: "Describe what you are looking for and we'll recommend the right option.",
-          primaryCta: { label: "Ask for advice", page: "contact", query: "?enquiry=quote" },
+          heading: "Every project starts with a conversation.",
+          text: "Tell us about the space, the scope and what a successful result looks like to you.",
+          primaryCta: { label: "Request a consultation", page: "contact", query: "?enquiry=quote" },
         },
       ],
     },
@@ -437,17 +390,16 @@ module.exports = {
     contact: {
       slug: "contact",
       seo: {
-        title: "Contact us",
-        description:
-          "Write a 120 to 160 character summary of your Contact page that invites visitors to request a quote or ask a question.",
-        keywords: ["contact your business"],
+        title: "Contact Aurel | Discuss Your Project",
+        description: "Start a conversation with Aurel Construction about a residential, commercial or renovation project in Durban and KwaZulu-Natal.",
+        keywords: ["contact construction company Durban", "building quote", "renovation enquiry"],
       },
       sections: [
         {
           type: "pageHeader",
-          eyebrow: "Contact",
-          heading: "Get in touch.",
-          text: "Send an enquiry using the form, or reach us directly using the details below.",
+          eyebrow: "Start a conversation",
+          heading: "Tell us what you have in mind.",
+          text: "Share a few details about your project. The more context you provide, the easier it is to understand the next step.",
         },
         { type: "contactMain" },
       ],
