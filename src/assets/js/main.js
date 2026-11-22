@@ -24,7 +24,7 @@
       if (e.target.closest("a")) setOpen(false);
     });
     document.addEventListener("click", function (e) {
-      if (!header.contains(e.target)) setOpen(false);
+      if (!header || !header.contains(e.target)) setOpen(false);
     });
   }
   if (header) {
